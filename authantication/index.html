@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google: Hind Siliguri Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Apply The Google Font */
+        body {
+            font-family: 'Hind Siliguri' !important;
+        }
+    </style>
+
+    <title>Hishebi</title>
+</head>
+
+<body class="m-0 ">
+    <!-- REGISTER -->
+    <main class="py-12 max-w-4xl mx-auto px-4">
+        <section class="w-full md:space-y-3.5 space-y-4">
+            <header class="flex md:space-x-8 space-x-6">
+                <!-- Icon -->
+                <div class="pt-0">
+                    <button class="md:text-4xl text-3xl text-blue-500 hover:text-blue-600">
+                        <i class="bi bi-arrow-left-short"></i>
+                    </button>
+                </div>
+
+                <div class="md:space-y-3 space-y-2">
+                    <!-- Title -->
+                    <h1 class="md:text-3xl text-2xl font-bold tracking-wide">
+                        Register
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="md:text-sm text-xs font-medium text-gray-800">
+                        Tell us a little bit about yourself to create <br>
+                        your account
+                    </p>
+                </div>
+            </header>
+
+            <div class="max-w-xs sm:max-w-sm mx-auto space-y-12">
+                <form action="register" method="post" class="space-y-3.5">
+
+                    <!-- Full name -->
+                    <div class="space-y-2">
+                        <!-- Use "border-gray-300" for error-free situations and
+                         "border-red-500" for errors -->
+                        <input type="text" name="full_name" placeholder="Full name"
+                            class="bg-blue-100 border-2 border-gray-300 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+
+                        <!-- Error Massage -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Name is required
+                        </p> -->
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="space-y-2">
+                        <!-- Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                        <input type="email" name="email" placeholder="Email"
+                            class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+
+                        <!-- Error Massage -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Email is required
+                        </p> -->
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="space-y-2">
+                        <div class="flex space-x-1.5">
+                            <!-- Country code -->
+                            <input placeholder="+88" disabled
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md block w-full max-w-[3.5rem] px-3 py-2.5">
+
+                            <!-- Phone Number 
+                                
+                            Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                            <input type="number" inputmode="numeric" name="phone_number" placeholder="Phone number"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+                        </div>
+
+                        <!-- Error Massage -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Phone number is required
+                        </p> -->
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="space-y-2">
+                        <div class="grid grid-cols-2 gap-x-2">
+                            <!-- Male 
+                              Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                            <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
+                                <input id="male_radio" type="radio" value="male" name="gender"
+                                    class="w-5 h-5 text-blue-600 block">
+                                <label for="male_radio"
+                                    class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Male</label>
+                            </div>
+
+                            <!-- Female
+                             Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                            <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
+                                <input id="female_radio" type="radio" value="female" name="gender"
+                                    class="w-5 h-5 text-blue-600 block">
+                                <label for="female_radio"
+                                    class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Female</label>
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required
+                        </p>
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="space-y-2 ">
+                        <div class="relative">
+                            <!-- Use "border-gray-300" for error-free situations and
+                              "border-red-500" for errors -->
+                            <input type="password" name="password" placeholder="Password"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
+
+                            <!-- Password visibility toggle button -->
+                            <button type="button"
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 text-xl">
+                                <!-- Visible_icon -->
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                                <!-- Hide_icon -->
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Password is required
+                        </p> -->
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="space-y-2 ">
+                        <div class="relative">
+                            <!-- Use "border-gray-300" for error-free situations and
+                                "border-red-500" for errors -->
+                            <input type="password" name="confirm_password" placeholder="Confirm password"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
+
+                            <!-- Password visibility toggle button -->
+                            <button type="button"
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 text-xl">
+                                <!-- Visible_icon -->
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                                <!-- Hide_icon -->
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Confirm password is required
+                        </p> -->
+                    </div>
+
+                    <!-- Register Button -->
+                    <button type="submit"
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
+                </form>
+
+                <!-- Terms and condition & privacy policy -->
+                <div class="text-center">
+                    <span class="font-medium">Terms and condition & <a class="text-blue-500 hover:underline" href="#">
+                            privacy policy</a></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

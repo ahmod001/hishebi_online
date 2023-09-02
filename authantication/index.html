@@ -34,7 +34,7 @@
 
 <body class="m-0 ">
     <!-- REGISTER -->
-    <main class="py-12 max-w-4xl mx-auto px-4">
+    <main class="min-h-screen flex items-center max-w-4xl mx-auto px-4 py-12">
         <section class="w-full md:space-y-3.5 space-y-4">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -190,8 +190,13 @@
                     </div>
 
                     <!-- Register Button -->
-                    <button type="submit"
-                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
+                    <!-- default mode-->
+                    <!-- <button type="submit"
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button> -->
+
+                    <!--  disabled mode -->
+                    <button type="submit" disabled
+                        class=" bg-blue-100 text-gray-500 border-2 border-gray-300 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
                 </form>
 
                 <!-- Terms and condition & privacy policy -->
@@ -202,6 +207,113 @@
             </div>
         </section>
     </main>
+
+    <!-- LOGIN -->
+    <main class="min-h-screen flex items-center max-w-4xl mx-auto px-4 ">
+        <section class="w-full space-y-8">
+            <header class="flex md:space-x-8 space-x-6">
+                <!-- Icon -->
+                <div class="pt-0">
+                    <button class="md:text-4xl text-3xl text-blue-500 hover:text-blue-600">
+                        <i class="bi bi-arrow-left-short"></i>
+                    </button>
+                </div>
+
+                <div class="md:space-y-3 space-y-2">
+                    <!-- Title -->
+                    <h1 class="md:text-3xl text-2xl font-bold tracking-wide">
+                        Login
+                    </h1>
+                </div>
+            </header>
+
+            <div class="max-w-xs sm:max-w-sm mx-auto space-y-12">
+                <form action="login" method="post" class="space-y-4">
+                    <!-- Email Address -->
+                    <div class="space-y-2">
+                        <!-- Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                        <input type="email" name="email" placeholder="Email"
+                            class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+
+                        <!-- Error Massage -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Email is required
+                        </p> -->
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="space-y-2 ">
+                        <div class="relative">
+                            <!-- Use "border-gray-300" for error-free situations and
+                              "border-red-500" for errors -->
+                            <input type="password" name="password" placeholder="Password"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
+
+                            <!-- Password visibility toggle button -->
+                            <button type="button"
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 text-xl">
+                                <!-- Visible_icon -->
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                                <!-- Hide_icon -->
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-xs text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Password is required
+                        </p> -->
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="flex items-center py-2.5">
+                        <div class="flex items-center h-5">
+                            <input id="remember" name="remember_me" type="checkbox" value="true"
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50">
+                        </div>
+                        <label for="remember"
+                            class="ml-2.5 text-base font-medium text-gray-800 cursor-pointer tracking-wide">Remember
+                            me</label>
+                    </div>
+
+                    <div class="text-end space-y-3">
+                        <!-- Login Button 
+                            
+                            default mode-->
+                        <button type="submit"
+                            class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Login</button>
+
+                        <!--  disabled mode -->
+                        <!-- <button type="submit" disabled
+                        class=" bg-blue-100 text-gray-500 border-2 border-gray-300 font-semibold tracking-wide rounded-md py-2.5 block w-full">Login</button> -->
+
+                        <!-- Forget Password -->
+                        <a class="font-medium me-0.5 text-blue-500 hover:underline inline-block" href="#">
+                            Forgot password? </a>
+                    </div>
+                </form>
+
+                <div class="text-center space-y-8">
+                    <div class="">
+                        <hr class="border-blue-200 w-full">
+                    </div>
+                    <span class="font-medium block">
+                        New to Hishebi? <span class="text-blue-500">Create an account</span> 
+                    </span>
+
+                    <!-- Register Button -->
+                    <button type="button"
+                    class="text-blue-600 border-blue-600 hover:text-white border-2 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
+
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
 
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

@@ -8,15 +8,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome Icons -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Google: Hind Siliguri Font -->
+    <!-- Google Font: Hind Siliguri -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
@@ -33,8 +28,78 @@
 </head>
 
 <body class="m-0 ">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
+        <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto">Dropdown
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-20 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a>
+                                </li>
+                            </ul>
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- REGISTER -->
-    <main class="min-h-screen flex items-center max-w-4xl mx-auto px-4 py-12">
+    <main class="max-w-4xl mx-auto px-4 md:pt-28 pt-24 pb-12">
         <section class="w-full md:space-y-3.5 space-y-4">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -52,8 +117,7 @@
 
                     <!-- Description -->
                     <p class="md:text-sm text-xs font-medium text-gray-800">
-                        Tell us a little bit about yourself to create <br>
-                        your account
+                        Welcome to Hishebi, Tell us a bit <br> about yourself
                     </p>
                 </div>
             </header>
@@ -65,12 +129,13 @@
                     <div class="space-y-2">
                         <!-- Use "border-gray-300" for error-free situations and
                          "border-red-500" for errors -->
-                        <input type="text" name="full_name" placeholder="Full name"
-                            class="bg-blue-100 border-2 border-gray-300 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+                        <input type="text" name="full_name" placeholder="Full name" autocomplete="name"
+                            autocapitalize="words"
+                            class="bg-blue-100 border-2 border-gray-300 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5">
 
                         <!-- Error Massage -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Name is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-sm"></i> Name is required
                         </p> -->
                     </div>
 
@@ -78,12 +143,12 @@
                     <div class="space-y-2">
                         <!-- Use "border-gray-300" for error-free situations and
                              "border-red-500" for errors -->
-                        <input type="email" name="email" placeholder="Email"
+                        <input type="email" name="email" placeholder="Email" autocomplete="email"
                             class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
 
                         <!-- Error Massage -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Email is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-sm"></i> Email is required
                         </p> -->
                     </div>
 
@@ -103,8 +168,8 @@
                         </div>
 
                         <!-- Error Massage -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Phone number is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-sm"></i> Phone number is required
                         </p> -->
                     </div>
 
@@ -133,7 +198,7 @@
                         </div>
 
                         <!-- Error Message -->
-                        <p class="ms-1 text-xs text-red-600">
+                        <p class="ms-1 text-sm text-red-600">
                             <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required
                         </p>
                     </div>
@@ -144,7 +209,7 @@
                         <div class="relative">
                             <!-- Use "border-gray-300" for error-free situations and
                               "border-red-500" for errors -->
-                            <input type="password" name="password" placeholder="Password"
+                            <input type="password" name="password" placeholder="Password" autocomplete="new-password"
                                 class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
 
                             <!-- Password visibility toggle button -->
@@ -159,8 +224,8 @@
                         </div>
 
                         <!-- Error Message -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Password is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-sm"></i> Password is required
                         </p> -->
                     </div>
 
@@ -184,8 +249,8 @@
                         </div>
 
                         <!-- Error Message -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Confirm password is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Password didn't match
                         </p> -->
                     </div>
 
@@ -209,7 +274,7 @@
     </main>
 
     <!-- LOGIN -->
-    <main class="min-h-screen flex items-center max-w-4xl mx-auto px-4 ">
+    <main class="max-w-4xl mx-auto px-4 md:pt-28 pt-24 pb-12">
         <section class="w-full space-y-8">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -227,28 +292,28 @@
                 </div>
             </header>
 
-            <div class="max-w-xs sm:max-w-sm mx-auto space-y-12">
+            <div class="max-w-xs sm:max-w-sm mx-auto space-y-10">
                 <form action="login" method="post" class="space-y-4">
                     <!-- Email Address -->
-                    <div class="space-y-2">
+                    <div class="space-y-1.5">
                         <!-- Use "border-gray-300" for error-free situations and
                              "border-red-500" for errors -->
-                        <input type="email" name="email" placeholder="Email"
+                        <input type="email" name="email" placeholder="Email" autocomplete="email"
                             class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
 
-                        <!-- Error Massage -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Email is required
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Invalid email 
                         </p> -->
                     </div>
 
-
                     <!-- Password -->
-                    <div class="space-y-2 ">
+                    <div class="space-y-1.5">
                         <div class="relative">
                             <!-- Use "border-gray-300" for error-free situations and
                               "border-red-500" for errors -->
                             <input type="password" name="password" placeholder="Password"
+                                autocomplete="current-password"
                                 class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
 
                             <!-- Password visibility toggle button -->
@@ -263,8 +328,8 @@
                         </div>
 
                         <!-- Error Message -->
-                        <!-- <p class="ms-1 text-xs text-red-600">
-                            <i class="bi bi-exclamation-circle-fill me-0.5 text-xs"></i> Password is required
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Wrong password
                         </p> -->
                     </div>
 
@@ -296,24 +361,226 @@
                     </div>
                 </form>
 
-                <div class="text-center space-y-8">
+                <div class="text-center space-y-7">
                     <div class="">
                         <hr class="border-blue-200 w-full">
                     </div>
                     <span class="font-medium block">
-                        New to Hishebi? <span class="text-blue-500">Create an account</span> 
+                        New to Hishebi? <span class="text-blue-500">Create an account</span>
                     </span>
 
                     <!-- Register Button -->
                     <button type="button"
-                    class="text-blue-600 border-blue-600 hover:text-white border-2 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
+                        class="text-blue-600 border-blue-600 hover:text-white border-2 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
 
                 </div>
-                
+
             </div>
         </section>
     </main>
 
+    <!-- FORGOT PASSWORD -->
+    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+        <section class="w-full md:space-y-12 space-y-12">
+            <header class="flex md:space-x-8 space-x-6">
+                <!-- Icon -->
+                <div class="pt-0">
+                    <button class="md:text-4xl text-3xl text-blue-500 hover:text-blue-600">
+                        <i class="bi bi-arrow-left-short"></i>
+                    </button>
+                </div>
+
+                <div class="md:space-y-3 space-y-2">
+                    <!-- Title -->
+                    <h1 class="md:text-3xl text-2xl font-bold tracking-wide">
+                        Forgot password
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="md:text-sm text-xs font-medium text-gray-800">
+                        Don't worry! Fill in your email, and we'll send <br> you an OTP to reset your password.
+                    </p>
+                </div>
+            </header>
+
+            <div class="max-w-xs sm:max-w-sm mx-auto">
+                <form action="forgot_password" method="post" class="space-y-6">
+
+                    <!-- Email Address -->
+                    <div class="space-y-1.5">
+                        <!-- Use "border-gray-300" for error-free situations and
+                                 "border-red-500" for errors -->
+                        <input type="email" name="email" placeholder="Email" autocomplete="email"
+                            class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5">
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Invalid email
+                        </p> -->
+                    </div>
+
+                    <!-- Register Button 
+                         default mode-->
+
+                    <!-- <button type="submit"
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Send email</button> -->
+
+                    <!--  disabled mode -->
+                    <button type="submit" disabled
+                        class=" bg-blue-100 text-gray-500 border-2 border-gray-300 font-semibold tracking-wide rounded-md py-2.5 block w-full">Send
+                        email</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- OTP VERIFICATION-->
+    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+        <section class="w-full md:space-y-12 space-y-12">
+            <header class="flex md:space-x-8 space-x-6">
+                <!-- Icon -->
+                <div class="pt-0">
+                    <button class="md:text-4xl text-3xl text-blue-500 hover:text-blue-600">
+                        <i class="bi bi-arrow-left-short"></i>
+                    </button>
+                </div>
+
+                <div class="md:space-y-3 space-y-2">
+                    <!-- Title -->
+                    <h1 class="md:text-3xl text-2xl font-bold tracking-wide">
+                        OTP Verification
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="md:text-sm text-xs font-medium text-gray-800">
+                        Enter the OTP code send to: <span class="text-blue-500 font-semibold">hishebi@gmail.com</span>
+                    </p>
+                </div>
+            </header>
+
+            <div class="max-w-xs sm:max-w-sm mx-auto">
+                <form action="otp_verification" method="post" class="space-y-6">
+
+                    <!-- OTP Code-->
+                    <div class="space-y-3.5">
+                        <div class="space-y-1.5">
+                            <!-- Use "border-gray-300" for error-free situations and
+                                 "border-red-500" for errors -->
+                            <input type="number" name="otp_code" placeholder="OTP code"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5">
+
+                            <!-- Error Message -->
+                            <!-- <p class="ms-1 text-sm text-red-600">
+                                 <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Invalid OTP code
+                             </p> -->
+                        </div>
+
+                        <!-- Resend OTP -->
+                        <div>
+                            <span class="text-gray-400"><i class="bi bi-exclamation-circle-fill me-0.5 text-sm">
+                                </i>Didn't
+                                get your code? <a class="text-blue-500 hover:underline font-medium" href="#">
+                                    Resend</a></span>
+                        </div>
+                    </div>
+
+                    <!-- Submit OTP Button 
+                         default mode-->
+                    <button type="submit"
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Submit
+                        OTP</button>
+
+                    <!--  disabled mode -->
+                    <!-- <button type="submit" disabled
+                        class=" bg-blue-100 text-gray-500 border-2 border-gray-300 font-semibold tracking-wide rounded-md py-2.5 block w-full">Submit OTP</button> -->
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- RESET PASSWORD -->
+    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+        <section class="w-full md:space-y-12 space-y-12">
+            <header class="flex md:space-x-8 space-x-6">
+                <!-- Icon -->
+                <div class="pt-0">
+                    <button class="md:text-4xl text-3xl text-blue-500 hover:text-blue-600">
+                        <i class="bi bi-arrow-left-short"></i>
+                    </button>
+                </div>
+
+                <div class="md:space-y-3 space-y-2">
+                    <!-- Title -->
+                    <h1 class="md:text-3xl text-2xl font-bold tracking-wide">
+                        Reset Password
+                    </h1>
+                </div>
+            </header>
+
+            <div class="max-w-xs sm:max-w-sm mx-auto">
+                <form action="Reset_password" method="post" class="space-y-6">
+                    <!-- New Password -->
+                    <div class="space-y-2 ">
+                        <div class="relative">
+                            <!-- Use "border-gray-300" for error-free situations and
+                              "border-red-500" for errors -->
+                            <input type="password" name="new_password" placeholder="New password"
+                                autocomplete="new-password"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
+
+                            <!-- Password visibility toggle button -->
+                            <button type="button"
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 text-xl">
+                                <!-- Visible_icon -->
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                                <!-- Hide_icon -->
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5 text-sm"></i> Password is required
+                        </p> -->
+                    </div>
+
+                    <!-- Re-enter Password -->
+                    <div class="space-y-2 ">
+                        <div class="relative">
+                            <!-- Use "border-gray-300" for error-free situations and
+                                "border-red-500" for errors -->
+                            <input type="password" name="confirm_password" placeholder="Re-enter Password"
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5 pr-12">
+
+                            <!-- Password visibility toggle button -->
+                            <button type="button"
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 text-xl">
+                                <!-- Visible_icon -->
+                                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                                <!-- Hide_icon -->
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-triangle-fill me-0.5 text-sm"></i> Password didn't match
+                        </p> -->
+                    </div>
+                    <!-- Submit OTP Button 
+                         default mode-->
+                    <!-- <button type="submit"
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Save</button> -->
+
+                    <!--  disabled mode -->
+                    <button type="submit" disabled
+                        class=" bg-blue-100 text-gray-500 border-2 border-gray-300 font-semibold tracking-wide rounded-md py-2.5 block w-full">Save</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

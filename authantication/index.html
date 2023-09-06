@@ -242,7 +242,7 @@
                             Use "border-gray-300" for error-free situations and
                              "border-red-500" for errors -->
                             <input type="number" inputmode="numeric" name="phone_number" placeholder="Phone number"
-                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5  ">
+                                class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-3 py-2.5">
                         </div>
 
                         <!-- Error Massage -->
@@ -251,12 +251,11 @@
                         </p> -->
                     </div>
 
-                    <!-- Gender -->
-                    <div class="space-y-2">
+                    <!--Gender: Radio -->
+                    <!--
+                    <div class="space-y-2 hidden">
                         <div class="grid grid-cols-2 gap-x-2">
-                            <!-- Male 
-                              Use "border-gray-300" for error-free situations and
-                             "border-red-500" for errors -->
+                    
                             <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
                                 <input id="male_radio" type="radio" value="male" name="gender"
                                     class="w-5 h-5 text-blue-600 block">
@@ -264,9 +263,7 @@
                                     class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Male</label>
                             </div>
 
-                            <!-- Female
-                             Use "border-gray-300" for error-free situations and
-                             "border-red-500" for errors -->
+                   
                             <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
                                 <input id="female_radio" type="radio" value="female" name="gender"
                                     class="w-5 h-5 text-blue-600 block">
@@ -274,7 +271,23 @@
                                     class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Female</label>
                             </div>
                         </div>
+                                -->
+                    <!-- Error Message -->
+                    <!-- <p class="ms-1 text-sm text-red-600">
+                            <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required
+                        </p>
+                    </div> -->
 
+                    <!-- Gender: Dropdown Select -->
+                    <div class="space-y-2">
+                        <!--Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                        <select id="gender"
+                            class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm font-medium rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full p-2.5">
+                            <option selected>Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                         <!-- Error Message -->
                         <p class="ms-1 text-sm text-red-600">
                             <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required

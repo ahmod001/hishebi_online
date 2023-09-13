@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Font: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Apply The Google Font */
+        body {
+            font-family: 'Hind Siliguri' !important;
+        }
+    </style>
+
+    <title>Hishebi</title>
+</head>
+
+<body class="m-0">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div class="flex items-center">
+                    <!-- Open Drawer Button -->
+                    <button type="button"
+                        class="flex items-center p-2 w-10 h-10 justify-center text-3xl text-gray-500 rounded-md lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                        aria-controls="drawer-navigation">
+                        <i class="bi bi-list block"></i>
+                    </button>
+
+                    <!-- Brand Icon -->
+                    <a href="#" class="flex items-center">
+                        <img src="../resource/hishebi_icon.svg" class="sm:h-11 h-10 w-auto ms-2.5"
+                            alt="hishebi_online" />
+                    </a>
+                </div>
+
+                <!-- Flex Mode -->
+                <div class="hidden w-full lg:block lg:w-auto">
+                    <ul
+                        class="flex flex-col lg:flex-row font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-white">
+
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 "
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <!-- About -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">About</a>
+                        </li>
+
+                        <!-- Features Dropdown -->
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0 lg:w-auto">
+                                Features
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="z-20 hidden font-normal bg-white divide-y rounded-lg shadow w-44">
+
+                                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Login Button -->
+                <button type="button"
+                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button>
+
+                <!-- If user is logged in
+                        show profile icon -->
+                <!-- <div class="w-8 h-8 overflow-hidden bg-gray-100 rounded-full cursor-pointer ring-2 ring-gray-300">
+                  
+                    <img src="../resource/user_avatar.jpg" class="h-full w-full object-cover" alt="user_name">
+                </div> -->
+
+
+            </div>
+        </nav>
+        <!-- Drawer Mode -->
+        <div id="drawer-navigation"
+            class="fixed  top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 space-y-3"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+
+            <!-- Close Drawer Button-->
+            <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-8 h-8 ms-auto block flex items-center justify-center">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2.5">
+
+                    <!-- Home -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded-md"
+                            aria-current="page">Home</a>
+                    </li>
+
+                    <!-- About -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">About</a>
+                    </li>
+
+                    <!-- Features Dropdown -->
+                    <li>
+                        <button aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 rounded-md group">
+                            Features
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul id="dropdown-example" class="hidden py-2 space-y-2" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Demo </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="pb-12 min-h-screen space-y-28">
+        <!-- HERO-->
+        <section class="bg-blue-50 px-4 md:pt-20 pt-28">
+            <div class="max-w-5xl mx-auto ">
+                <div class='md:grid md:grid-cols-2 flex flex-col space-y-10 gap-x-5'>
+                    <div class='col flex items-center md:justify-start justify-center'>
+                        <div class='lg:space-y-7 space-y-6'>
+                            <!-- Title -->
+                            <h1 class='lg:text-4xl text-3xl font-bold tracking-wide md:text-start text-center '>
+                                Track your daily incomes <br>
+                                and expenses
+                            </h1>
+                            <!-- Description -->
+                            <p class='lg:text-base md:text-sm text-sm text-gray-700  md:text-start text-center'>
+                                Hisebi is a daily income expense tracking app through <br>
+                                which you can constantly track all your daily/monthly/yearly <br>
+                                income and expense accounts.
+                            </p>
+
+                            <!-- Playstore -->
+                            <a href="" target="_blank" class="block flex md:justify-start justify-center">
+                                <img src="../resource/icons/playstore.png" className='xl:h-8 md:h-6 h-5 w-auto'
+                                    alt="playStore" />
+                            </a>
+
+                            <div class="flex justify-between max-w-[17.5rem] md:mx-0 mx-auto text-center">
+                                <!-- Downloads -->
+                                <div class="lg:space-y-2 space-y-1.5">
+                                    <h1 class="lg:text-4xl text-3xl text-blue-500 font-semibold tracking-wide"
+                                        id="downloads">
+                                        10k+
+                                    </h1>
+
+                                    <h3 class="lg:text-xl text-lg font-medium">
+                                        <i class="bi bi-person-fill text-blue-500 me-1"></i> Downloads
+                                    </h3>
+                                </div>
+
+                                <div class="lg:space-y-2 space-y-1.5">
+                                    <h1 class="lg:text-4xl text-3xl text-blue-500 font-semibold tracking-wide "
+                                        id="ratings">
+                                        4.7
+                                    </h1>
+
+                                    <h3 class="lg:text-xl text-lg font-medium">
+                                        <i class="bi bi-star-fill text-blue-500 text-base me-1"></i>
+                                        Ratings
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Mockup -->
+                    <div class="col flex md:justify-end justify-center ">
+                        <img class="lg:h-[30rem] md:h-[26rem] mx-h-[19rem] sm:max-w-sm max-w-xs rounded-t-3xl shadow-sm"
+                            src="../resource/mockups/app_screenshot.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="space-y-10 px-4 max-w-5xl mx-auto">
+            <header class="space-y-4">
+                <!-- Title -->
+                <h1 class='text-3xl font-bold tracking-wide text-center '>
+                    Features
+                </h1>
+                <!-- Description -->
+                <p class='lg:text-base md:text-sm text-sm text-gray-700 text-center'>
+                    We have special features through which <br>
+                    you can easily manage your daily basis expenses.
+                </p>
+            </header>
+
+            <!-- Cards -->
+            <div id="features" class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5">
+
+                <!-- Debt & Credit Manager -->
+                <div
+                    class="lg:max-w-[18.75rem] lg:h-[17.0625rem] max-w-[17.75rem] h-[15.5rem] w-full mx-auto bg-blue-50 rounded-md shadow-sm md:hover:shadow-md md:hover:scale-101 md:hover:-translate-y-0.5 transform origin-center md:space-y-7 pt-8 flex justify-center transition-all duration-[400ms]">
+                    <div class="text-center lg:space-y-10 md:space-y-7 space-y-10">
+                        <!-- Icon -->
+                        <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
+                            src="../resource/icons/features/feature_2.png" alt="">
+
+                        <div class="space-y-3 p-2">
+                            <!-- Title -->
+                            <h3 class="lg:text-2xl text-xl font-semibold">
+                                Debt-Credit
+                            </h3>
+
+                            <!-- Short Description
+                            max_length = 18characters -->
+                            <p class='lg:text-base text-sm text-center'>
+                                Effortlessly manage your debts and credits
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Create Budgets -->
+                <div
+                    class="lg:max-w-[18.75rem] lg:h-[17.0625rem] max-w-[17.75rem] h-[15.5rem] w-full mx-auto bg-blue-50 rounded-md shadow-sm md:hover:shadow-md md:hover:scale-101 md:hover:-translate-y-0.5 transform origin-center pt-8 flex justify-center transition-all duration-[400ms]">
+                    <div class="text-center lg:space-y-10 md:space-y-7 space-y-10">
+                        <!-- Icon -->
+                        <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
+                            src="../resource/icons/features/feature_1.png" alt="">
+
+                        <div class="space-y-3 p-2">
+                            <!-- Title -->
+                            <h3 class="lg:text-2xl text-xl font-semibold">
+                               Make Budget
+                            </h3>
+
+                            <!-- Short Description
+                              max_length = 18characters -->
+                            <p class='lg:text-base text-sm text-center'>
+                                Easily access and manage your budgets
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saving and expense manger -->
+                <div
+                    class="lg:max-w-[18.75rem] lg:h-[17.0625rem] max-w-[17.75rem] h-[15.5rem] w-full mx-auto bg-blue-50 rounded-md shadow-sm md:hover:shadow-md md:hover:scale-101 md:hover:-translate-y-0.5 transform origin-center pt-8 flex justify-center transition-all duration-[400ms]">
+                    <div class="text-center lg:space-y-10 md:space-y-7 space-y-10">
+                        <!-- Icon -->
+                        <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
+                            src="../resource/icons/features/feature_3.png" alt="">
+
+                        <div class="space-y-3 p-2">
+                            <!-- Title -->
+                            <h3 class="lg:text-2xl text-xl font-semibold">
+                                Saving-Expense
+                            </h3>
+
+                            <!-- Short Description
+                               max_length = 18characters -->
+                            <p class='lg:text-base text-sm text-center'>
+                               Track and manage your savings and expenses
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="space-y-10 px-4 ">
+            <!-- Title -->
+            <h1 class='text-3xl font-bold tracking-wide text-center '>
+                How it works
+            </h1>
+
+            <!-- Tutorial Video 
+                
+                To prevent the display of unrelated video suggestions from YouTube:
+                    1. Add the "&rel=0" parameter at the end of the video's URL.
+                    2. Replace "www.youtube.com" with "www.youtube-nocookie.com". -->
+
+            <div>
+                <iframe src="https://www.youtube-nocookie.com/embed/G11LQ2c7DC0?si=ba4w_RUW6590Z71f&rel=0"
+                    title="Tutorial" frameborder="0" class="mx-auto w-full max-w-2xl aspect-video rounded-md"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Flowbite 
+    * You must include this cdn in your app -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

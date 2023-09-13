@@ -32,7 +32,7 @@
     <!-- NAVBAR -->
     <header>
         <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
-            <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div class="flex items-center">
                     <!-- Open Drawer Button -->
                     <button type="button"
@@ -105,13 +105,13 @@
 
                 <!-- Login Button -->
                 <button type="button"
-                    class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button>
+                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button>
 
                 <!-- If user is logged in
                         show profile icon -->
-                <!-- <div class="w-9 h-9 overflow-hidden bg-gray-100 rounded-full cursor-pointer ring-2 ring-gray-300">
+                <!-- <div class="w-8 h-8 overflow-hidden bg-gray-100 rounded-full cursor-pointer ring-2 ring-gray-300">
                   
-                    <img src="../resource/user_avatarjpg.jpg" class="h-full w-full object-cover" alt="user_name">
+                    <img src="../resource/user_avatar.jpg" class="h-full w-full object-cover" alt="user_name">
                 </div> -->
 
 
@@ -177,7 +177,7 @@
     </header>
 
     <!-- REGISTER -->
-    <main class="max-w-4xl mx-auto px-4 md:pt-28 pt-24 pb-12">
+    <main class="max-w-5xl mx-auto px-4 md:pt-28 pt-24 pb-12">
         <section class="w-full md:space-y-3.5 space-y-4">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -252,47 +252,51 @@
                     </div>
 
                     <!--Gender: Radio -->
-                    <!--
-                    <div class="space-y-2 hidden">
+
+                    <div class="space-y-2">
                         <div class="grid grid-cols-2 gap-x-2">
-                    
-                            <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
+
+                            <!-- Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                            <div class="flex items-center bg-blue-100 pl-4 border-2 rounded-md w-full">
                                 <input id="male_radio" type="radio" value="male" name="gender"
                                     class="w-5 h-5 text-blue-600 block">
                                 <label for="male_radio"
                                     class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Male</label>
                             </div>
 
-                   
-                            <div class="flex items-center bg-blue-100 pl-4 border-2 border-red-500 rounded-md w-full">
+
+                            <!-- Use "border-gray-300" for error-free situations and
+                             "border-red-500" for errors -->
+                            <div class="flex items-center bg-blue-100 pl-4 border-2 rounded-md w-full">
                                 <input id="female_radio" type="radio" value="female" name="gender"
                                     class="w-5 h-5 text-blue-600 block">
                                 <label for="female_radio"
                                     class="py-2.5 ml-2 text-sm w-full h-full font-semibold tracking-wide text-gray-900">Female</label>
                             </div>
                         </div>
-                                -->
-                    <!-- Error Message -->
-                    <!-- <p class="ms-1 text-sm text-red-600">
+
+                        <!-- Error Message -->
+                        <!-- <p class="ms-1 text-sm text-red-600">
                             <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required
-                        </p>
-                    </div> -->
+                        </p> -->
+                    </div>
 
                     <!-- Gender: Dropdown Select -->
-                    <div class="space-y-2">
-                        <!--Use "border-gray-300" for error-free situations and
+                    <!-- <div class="space-y-2"> -->
+                    <!--Use "border-gray-300" for error-free situations and
                              "border-red-500" for errors -->
-                        <select id="gender"
+                    <!-- <select id="gender"
                             class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm font-medium rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full p-2.5">
                             <option selected>Select gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
-                        </select>
-                        <!-- Error Message -->
-                        <p class="ms-1 text-sm text-red-600">
+                        </select> -->
+                    <!-- Error Message -->
+                    <!-- <p class="ms-1 text-sm text-red-600">
                             <i class="bi bi-exclamation-circle-fill me-0.5"></i> Gender selection is required
-                        </p>
-                    </div>
+                        </p> -->
+                    <!-- </div> -->
 
                     <!-- Password -->
                     <div class="space-y-2 ">
@@ -347,7 +351,7 @@
                     <!-- Register Button -->
                     <!-- Default mode -->
                     <!--<button type="submit"
-                        class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>-->
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>-->
 
                     <!--  disabled mode -->
                     <button type="submit" disabled
@@ -365,7 +369,7 @@
     </main>
 
     <!-- LOGIN -->
-    <main class="max-w-4xl mx-auto px-4 md:pt-28 pt-24 pb-12">
+    <main class="max-w-5xl mx-auto px-4 md:pt-28 pt-24 pb-12">
         <section class="w-full space-y-8">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -439,7 +443,7 @@
                         <!-- Login Button 
                             default mode-->
                         <button type="submit"
-                            class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Login</button>
+                            class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Login</button>
 
                         <!--  disabled mode -->
                         <!-- <button type="submit" disabled
@@ -461,8 +465,7 @@
 
                     <!-- Register Button -->
                     <button type="button"
-                        class="text-blue-600 border-blue-600 hover:text-white border-2 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
-
+                        class="text-blue-600 border-blue-600 hover:text-white border-2 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Register</button>
                 </div>
 
             </div>
@@ -470,7 +473,7 @@
     </main>
 
     <!-- FORGOT PASSWORD -->
-    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+    <main class="min-h-screen  max-w-5xl mx-auto px-4 md:pt-28 pt-24">
         <section class="w-full md:space-y-12 space-y-12">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -513,7 +516,7 @@
                          default mode-->
 
                     <!-- <button type="submit"
-                        class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Send email</button> -->
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Send email</button> -->
 
                     <!--  disabled mode -->
                     <button type="submit" disabled
@@ -525,7 +528,7 @@
     </main>
 
     <!-- OTP VERIFICATION-->
-    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+    <main class="min-h-screen  max-w-5xl mx-auto px-4 md:pt-28 pt-24">
         <section class="w-full md:space-y-12 space-y-12">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -577,7 +580,7 @@
                     <!-- Submit OTP Button 
                          default mode-->
                     <button type="submit"
-                        class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Submit
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Submit
                         OTP</button>
 
                     <!--  disabled mode -->
@@ -589,7 +592,7 @@
     </main>
 
     <!-- RESET PASSWORD -->
-    <main class="min-h-screen  max-w-4xl mx-auto px-4 md:pt-28 pt-24">
+    <main class="min-h-screen  max-w-5xl mx-auto px-4 md:pt-28 pt-24">
         <section class="w-full md:space-y-12 space-y-12">
             <header class="flex md:space-x-8 space-x-6">
                 <!-- Icon -->
@@ -662,7 +665,7 @@
                     <!-- Submit OTP Button 
                          default mode-->
                     <!-- <button type="submit"
-                        class="text-white bg-blue-600 hover:bg-blue-600 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Save</button> -->
+                        class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-semibold tracking-wide rounded-md py-2.5 block w-full">Save</button> -->
 
                     <!--  disabled mode -->
                     <button type="submit" disabled

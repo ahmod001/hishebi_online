@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <style>
         /* Apply The Google Font */
         body {
@@ -329,6 +332,83 @@
         </section>
 
         <!-- HOW IT WORKS -->
+        <section class="space-y-10 lg:px-0 px-4">
+            <!-- Title -->
+            <h1 class='text-3xl font-bold tracking-wide text-center '>
+                Reviews
+            </h1>
+
+            <!-- Reviews -->
+            <div class="swiper swiper-no-swiping max-w-[100rem]  ">
+                <div id="reviews" class="swiper-wrapper transition-timing-linear"
+                    style="transition-timing-function: linear;">
+
+                    <!-- Review Card -->
+                    <div class='swiper-slide bg-blue-50 review-card rounded-md mx-auto sm:p-8 p-6 max-w-[30rem] h-[15.5rem] shadow-sm'
+                        key=''>
+                        <div class="md:space-y-8 sm:space-y-7 space-y-4">
+                            <header class='sm:flex items-center sm:space-y-0 sm:space-x-4 space-y-3.5'>
+                                <!-- User Img -->
+                                <img class="h-10 md:h-12 object-cover" src="../resource/icons/reviewer.png" alt="">
+
+                                <!-- Name -->
+                                <!-- max-length: 25 charcters -->
+                                <h3 class='font-semibold h-6 tracking-wide text-lg'>
+                                    Md Ashraful Alam Choudhuri
+                                </h3>
+                            </header>
+
+                            <!-- Descriptions 
+                        max-length: 150 characters -->
+                            <p class='text-sm max-h-[6rem] overflow-y-hidden text-gray-900'> Lorem ipsum dolor sit
+                                This app is very helpful us. This app is very good for keeping our daily accounts. I
+                                have
+                                been waiting for such an app for so long Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Qui fuga molestiae quas ipsa tempora asperiores rem dolorum, perferendis
+                                dignissimos?
+                                Placeat fugit cumque delectus quia mollitia quasi velit modi accusantium ut!</p>
+                        </div>
+                    </div>
+
+                    <!-- This script is for demonstration purposes only; you can remove it if needed -->
+                    <script>
+                        for (let i = 0; i < 20; i++) {
+                            document.getElementById('reviews').innerHTML += `
+                           <!-- Review Card -->
+                    <div class='swiper-slide bg-blue-50 review-card rounded-md mx-auto sm:p-8 p-6 max-w-[30rem] h-[15.5rem] shadow-sm'
+                        key=${i}>
+                        <div class="md:space-y-8 sm:space-y-7 space-y-4">
+                            <header class='sm:flex items-center sm:space-y-0 sm:space-x-4 space-y-3.5'>
+                                <!-- User Img -->
+                                <img class="h-10 md:h-12 object-cover" src="../resource/icons/reviewer.png" alt="">
+
+                                <!-- Name -->
+                                <!-- max-length: 25 charcters -->
+                                <h3 class='font-semibold h-6 tracking-wide text-lg'>
+                                    Md Ashraful Alam Choudhuri
+                                </h3>
+                            </header>
+
+                            <!-- Descriptions 
+                        max-length: 150 characters -->
+                            <p class='text-sm max-h-[6rem] overflow-y-hidden text-gray-900'> Lorem ipsum dolor sit
+                                This app is very helpful us. This app is very good for keeping our daily accounts. I
+                                have
+                                been waiting for such an app for so long Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Qui fuga molestiae quas ipsa tempora asperiores rem dolorum, perferendis
+                                dignissimos?
+                                Placeat fugit cumque delectus quia mollitia quasi velit modi accusantium ut!</p>
+                        </div>
+                    </div>`
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
         <section class="space-y-10 px-4 ">
             <!-- Title -->
             <h1 class='text-3xl font-bold tracking-wide text-center '>
@@ -463,7 +543,8 @@
 
                             <!-- Address -->
                             <li class="flex items-center">
-                                <i class="bi bi-geo-alt-fill text-sm pe-3 block"></i> <span class="block">Municipal Market,<br>Syed Mujtoba Ali Road,<br>  Moulvibazar 3200</span>
+                                <i class="bi bi-geo-alt-fill text-sm pe-3 block"></i> <span class="block">Municipal
+                                    Market,<br>Syed Mujtoba Ali Road,<br> Moulvibazar 3200</span>
                             </li>
                         </ul>
                     </div>
@@ -490,6 +571,54 @@
         <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
     </footer>
 
+
+    <!-- Include the Swiper JS library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper using ES modules -->
+    <script type="module">
+        // Import the Swiper class from the ES module
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+
+        // Create a new Swiper instance and configure it
+        const swiper = new Swiper('.swiper', {
+
+            // Specify the direction of the swiper (horizontal)
+            direction: 'horizontal',
+
+            // Define responsive breakpoints for different screen sizes
+            breakpoints: {
+
+                // Extra-Small Screen (screen width <= 0px)
+                0: {
+                    slidesPerView: 1,     // Show 1 slide at a time
+                    spaceBetween: 20      // Add 20px space between slides
+                },
+
+                // Large Screen (screen width >= 1060px)
+                1060: {
+                    slidesPerView: 2,     // Show 2 slides at a time
+                    spaceBetween: 15      // Add 15px space between slides
+                }
+            },
+
+            // Enable free mode, allowing for sliding to any position
+            module: {
+                freeMode: true
+            },
+
+            // Enable looping, creating a continuous slide effect
+            loop: true,
+            // Set the speed of slide transitions to 8000 milliseconds (8 seconds)
+            speed: 8000,
+
+            // Configure autoplay settings
+            autoplay: {
+                delay: 0,                // Set no delay between slides
+                disableOnInteraction: false,  // Do not stop autoplay on user interaction
+            },
+        });
+    </script>
 
 
     <!-- Flowbite 

@@ -200,7 +200,8 @@
                             </p>
 
                             <!-- Playstore -->
-                            <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1" target="_blank" class="block flex md:justify-start justify-center">
+                            <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1"
+                                target="_blank" class="block flex md:justify-start justify-center">
                                 <img src="../resource/icons/playstore.png" class='h-10' alt="playStore" />
                             </a>
 
@@ -340,8 +341,7 @@
 
             <!-- Reviews -->
             <div class="swiper swiper-no-swiping max-w-[100rem]">
-                <div id="reviews" class="swiper-wrapper transition-timing-linear"
-                    style="transition-timing-function: linear;">
+                <div id="reviews" class="swiper-wrapper" style="transition-timing-function: linear;">
 
                     <!-- Review Card -->
                     <div class='swiper-slide bg-blue-50 review-card rounded-md mx-auto sm:p-8 p-6 max-w-[30rem] h-[15.5rem] shadow-sm'
@@ -452,7 +452,8 @@
                         </h1>
 
                         <!-- Playstore -->
-                        <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1" target="_blank" class="block flex md:justify-start justify-center">
+                        <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1"
+                            target="_blank" class="block flex md:justify-start justify-center">
                             <img src="../resource/icons/playstore.png" class='h-10' alt="playStore" />
                         </a>
                     </div>
@@ -576,10 +577,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper using ES modules -->
-    <script type="module">
-        // Import the Swiper class from the ES module
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
-
+    <script>
         // Create a new Swiper instance and configure it
         const swiper = new Swiper('.swiper', {
 
@@ -603,7 +601,7 @@
             },
 
             // Enable looping, creating a continuous slide effect
-            // loop: true,
+            loop: false,
             // Set the speed of slide transitions to 8000 milliseconds (8 seconds)
             speed: 8000,
 

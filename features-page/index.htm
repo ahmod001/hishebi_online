@@ -187,76 +187,21 @@
         </div>
     </header>
 
-
-    <main class="pb-28 min-h-screen space-y-28">
-        <!-- HERO-->
-        <section class="bg-blue-50 px-4 md:pt-20 pt-28">
-            <div class="max-w-5xl mx-auto ">
-                <div class='md:grid md:grid-cols-2 flex flex-col space-y-10 gap-x-5'>
-                    <div class='col flex items-center md:justify-start justify-center'>
-                        <div class='lg:space-y-7 space-y-6'>
-                            <!-- Title -->
-                            <h1 class='lg:text-4xl text-3xl font-bold tracking-wide md:text-start text-center '>
-                                Track your daily incomes <br>
-                                and expenses
-                            </h1>
-                            <!-- Description -->
-                            <p class='lg:text-base md:text-sm text-sm text-gray-700  md:text-start text-center'>
-                                Hisebi is a daily income expense tracking app through <br>
-                                which you can constantly track all your daily/monthly/yearly <br>
-                                income and expense accounts.
-                            </p>
-
-                            <!-- Playstore -->
-                            <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1"
-                                target="_blank" class="block flex md:justify-start justify-center">
-                                <img src="../resource/icons/playstore.png" class='h-10' alt="playStore" />
-                            </a>
-
-                            <div class="flex justify-between max-w-[17.5rem] md:mx-0 mx-auto text-center pt-7">
-                                <!-- Downloads -->
-                                <div class="lg:space-y-2 space-y-1.5">
-                                    <h1 class="lg:text-4xl text-3xl text-blue-500 font-semibold tracking-wide"
-                                        id="downloads">
-                                        10k+
-                                    </h1>
-
-                                    <h3 class="lg:text-xl text-lg font-medium">
-                                        <i class="bi bi-person-fill text-blue-500 me-1"></i> Downloads
-                                    </h3>
-                                </div>
-
-                                <div class="lg:space-y-2 space-y-1.5">
-                                    <h1 class="lg:text-4xl text-3xl text-blue-500 font-semibold tracking-wide "
-                                        id="ratings">
-                                        4.7
-                                    </h1>
-
-                                    <h3 class="lg:text-xl text-lg font-medium">
-                                        <i class="bi bi-star-fill text-blue-500 text-base me-1"></i>
-                                        Ratings
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- App Mockup -->
-                    <div class="col flex md:justify-end justify-center ">
-                        <img class="lg:h-[30rem] md:h-[26rem] mx-h-[19rem] sm:max-w-sm max-w-xs rounded-t-3xl shadow-sm"
-                            src="../resource/mockups/app_screenshot.png" alt="">
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        </section>
+    <main class="pb-[4rem] min-h-screen space-y-14">
+        <!-- Breadcrumbs -->
+        <header class="bg-blue-50 md:h-[11rem] sm:h-[10.5rem] h-[9.5rem] flex items-end sm:pb-7 pb-6">
+            <ul class="flex justify-center space-x-1.5 w-full font-medium">
+                <li class="text-lg text-gray-800">Home</li>
+                <li class="md:text-xl text-lg">/</li>
+                <li class="md:text-xl text-lg text-blue-500">Features</li>
+            </ul>
+        </header>
 
         <!-- FEATURES -->
         <section class="space-y-10 px-4 max-w-5xl mx-auto">
             <header class="space-y-4">
                 <!-- Title -->
-                <h1 class='text-3xl font-bold tracking-wide text-center '>
+                <h1 class='text-3xl font-bold tracking-wide text-center'>
                     Features
                 </h1>
                 <!-- Description -->
@@ -267,7 +212,7 @@
             </header>
 
             <!-- Cards -->
-            <div id="features" class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5">
+            <div id="features" class="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 lg:gap-8 gap-6">
 
                 <!-- Debt & Credit Manager -->
                 <div
@@ -277,7 +222,7 @@
                         <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
                             src="../resource/icons/features/feature_2.png" alt="">
 
-                        <div class="space-y-3 p-2">
+                        <div class="space-y-3 p-3">
                             <!-- Title -->
                             <h3 class="lg:text-2xl text-xl font-semibold">
                                 Debt-Credit
@@ -300,7 +245,7 @@
                         <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
                             src="../resource/icons/features/feature_1.png" alt="">
 
-                        <div class="space-y-3 p-2">
+                        <div class="space-y-3 p-3">
                             <!-- Title -->
                             <h3 class="lg:text-2xl text-xl font-semibold">
                                 Make Budget
@@ -323,7 +268,7 @@
                         <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
                             src="../resource/icons/features/feature_3.png" alt="">
 
-                        <div class="space-y-3 p-2">
+                        <div class="space-y-3 p-3">
                             <!-- Title -->
                             <h3 class="lg:text-2xl text-xl font-semibold">
                                 Saving-Expense
@@ -337,139 +282,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- HOW IT WORKS -->
-        <section class="space-y-10 lg:px-0 px-4">
-            <!-- Title -->
-            <h1 class='text-3xl font-bold tracking-wide text-center '>
-                Reviews
-            </h1>
+                <!-- Notes -->
+                <div
+                    class="lg:max-w-[18.75rem] lg:h-[17.0625rem] max-w-[17.75rem] h-[15.5rem] w-full mx-auto bg-blue-50 rounded-md shadow-sm md:hover:shadow-md md:hover:scale-101 md:hover:-translate-y-0.5 transform origin-center pt-8 flex justify-center transition-all duration-[400ms]">
+                    <div class="text-center lg:space-y-10 md:space-y-7 space-y-10">
+                        <!-- Icon -->
+                        <img class="lg:max-h-[4.5rem] max-h-[4rem] mx-auto"
+                            src="../resource/icons/features/feature_4.png" alt="">
 
-            <!-- Reviews -->
-            <div class="swiper swiper-no-swiping max-w-[100rem]">
-                <div id="reviews" class="swiper-wrapper" style="transition-timing-function: linear;">
+                        <div class="space-y-3 p-3">
+                            <!-- Title -->
+                            <h3 class="lg:text-2xl text-xl font-semibold">
+                                Notes
+                            </h3>
 
-                    <!-- Review Card -->
-                    <div class='swiper-slide bg-blue-50 review-card rounded-md mx-auto sm:p-8 p-6 max-w-[30rem] h-[15.5rem] shadow-sm'
-                        key=''>
-                        <div class="md:space-y-8 sm:space-y-7 space-y-4">
-                            <header class='sm:flex items-center sm:space-y-0 sm:space-x-4 space-y-3.5'>
-                                <!-- User Img -->
-                                <img class="h-10 md:h-12 object-cover" src="../resource/icons/reviewer.png" alt="">
-
-                                <!-- Name -->
-                                <!-- max-length: 25 charcters -->
-                                <h3 class='font-semibold h-6 tracking-wide text-lg'>
-                                    Md Ashraful Alam Choudhuri
-                                </h3>
-                            </header>
-
-                            <!-- Descriptions 
-                        max-length: 150 characters -->
-                            <p class='text-sm max-h-[6rem] overflow-y-hidden text-gray-900'> Lorem ipsum dolor sit
-                                This app is very helpful us. This app is very good for keeping our daily accounts. I
-                                have
-                                been waiting for such an app for so long Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                                elit. Qui fuga molestiae quas ipsa tempora asperiores rem dolorum, perferendis
-                                dignissimos?
-                                Placeat fugit cumque delectus quia mollitia quasi velit modi accusantium ut!</p>
+                            <!-- Short Description
+                                max_length = 18characters -->
+                            <p class='lg:text-base text-sm text-center'>
+                                Create notes for your plans
+                            </p>
                         </div>
                     </div>
-
-                    <!-- This script is for demonstration purposes only; you can remove it if needed -->
-                    <script>
-                        for (let i = 0; i < 20; i++) {
-                            document.getElementById('reviews').innerHTML += `
-                           <!-- Review Card -->
-                    <div class='swiper-slide bg-blue-50 review-card rounded-md mx-auto sm:p-8 p-6 max-w-[30rem] h-[15.5rem] shadow-sm'
-                        key=${i}>
-                        <div class="md:space-y-8 sm:space-y-7 space-y-4">
-                            <header class='sm:flex items-center sm:space-y-0 sm:space-x-4 space-y-3.5'>
-                                <!-- User Img -->
-                                <img class="h-10 md:h-12 object-cover" src="../resource/icons/reviewer.png" alt="">
-
-                                <!-- Name -->
-                                <!-- max-length: 25 charcters -->
-                                <h3 class='font-semibold h-6 tracking-wide text-lg'>
-                                    Md Ashraful Alam Choudhuri
-                                </h3>
-                            </header>
-
-                            <!-- Descriptions 
-                        max-length: 150 characters -->
-                            <p class='text-sm max-h-[6rem] overflow-y-hidden text-gray-900'> Lorem ipsum dolor sit
-                                This app is very helpful us. This app is very good for keeping our daily accounts. I
-                                have
-                                been waiting for such an app for so long Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                                elit. Qui fuga molestiae quas ipsa tempora asperiores rem dolorum, perferendis
-                                dignissimos?
-                                Placeat fugit cumque delectus quia mollitia quasi velit modi accusantium ut!</p>
-                        </div>
-                    </div>`
-                        }
-                    </script>
-                </div>
-            </div>
-        </section>
-
-        <!-- HOW IT WORKS -->
-        <section class="space-y-10 px-4 ">
-            <!-- Title -->
-            <h1 class='text-3xl font-bold tracking-wide text-center '>
-                How it works
-            </h1>
-
-            <!-- Tutorial Video 
-                
-                To prevent the display of unrelated video suggestions from YouTube:
-                    1. Add the "&rel=0" parameter at the end of the video's URL.
-                    2. Replace "www.youtube.com" with "www.youtube-nocookie.com". -->
-            <div>
-                <iframe src="https://www.youtube-nocookie.com/embed/G11LQ2c7DC0?si=ba4w_RUW6590Z71f&rel=0"
-                    title="Tutorial" frameborder="0" class="mx-auto w-full max-w-2xl aspect-video rounded-md"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
-            </div>
-
-            <!-- Loading Skeleton -->
-            <!-- <div role="status"
-                class="flex items-center justify-center aspect-video mx-auto max-w-2xl bg-gray-300 rounded-md animate-pulse">
-                <svg class="w-10 h-10 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor" viewBox="0 0 16 20">
-                    <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
-                    <path
-                        d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM9 13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2Zm4 .382a1 1 0 0 1-1.447.894L10 13v-2l1.553-1.276a1 1 0 0 1 1.447.894v2.764Z" />
-                </svg>
-                <span class="sr-only">Loading...</span>
-            </div> -->
-        </section>
-
-        <!-- DOWNLOAD HISEBI  -->
-        <section class="bg-blue-50 md:pt-0 pt-14">
-            <div
-                class="max-w-5xl px-4 mx-auto lg:h-[23rem] md:grid md:grid-cols-2 flex flex-col space-y-14 md:space-y-0 gap-x-5">
-                <div class="flex items-center md:justify-start justify-center">
-                    <div class='lg:space-y-7 space-y-6'>
-                        <!-- Title -->
-                        <h1
-                            class='lg:text-4xl text-3xl font-semibold tracking-wide md:text-start text-center text-blue-500'>
-                            Download Hisebi
-                        </h1>
-
-                        <!-- Playstore -->
-                        <a href="https://play.google.com/store/apps/details?id=droidrocks.com.hishebi&pli=1"
-                            target="_blank" class="block flex md:justify-start justify-center">
-                            <img src="../resource/icons/playstore.png" class='h-10' alt="playStore" />
-                        </a>
-                    </div>
-                </div>
-                <!-- App Mockup -->
-                <div class="col flex md:justify-end justify-center">
-                    <img class="lg:h-[25.45rem] md:h-full h-[19rem] lg:relative bottom-10" loading="lazy"
-                        src="../resource/mockups/app_solid_mockup.png" alt="download-hisebi">
                 </div>
             </div>
         </section>
@@ -579,48 +413,6 @@
         <!-- Copywrite -->
         <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
     </footer>
-
-
-    <!-- Include the Swiper JS library from a CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper using ES modules -->
-    <script>
-        // Create a new Swiper instance and configure it
-        const swiper = new Swiper('.swiper', {
-
-            // Specify the direction of the swiper (horizontal)
-            direction: 'horizontal',
-
-            // Define responsive breakpoints for different screen sizes
-            breakpoints: {
-
-                // Extra-Small Screen (screen width <= 0px)
-                0: {
-                    slidesPerView: 1,     // Show 1 slide at a time
-                    spaceBetween: 20      // Add 20px space between slides
-                },
-
-                // Large Screen (screen width >= 1060px)
-                1060: {
-                    slidesPerView: 2,     // Show 2 slides at a time
-                    spaceBetween: 15      // Add 15px space between slides
-                }
-            },
-
-            // Enable looping, creating a continuous slide effect
-            loop: false,
-            // Set the speed of slide transitions to 8000 milliseconds (8 seconds)
-            speed: 8000,
-
-            // Configure autoplay settings
-            autoplay: {
-                delay: 0,                // Set no delay between slides
-                disableOnInteraction: false,  // Do not stop autoplay on user interaction
-            },
-        });
-
-    </script>
 
 
     <!-- Flowbite 

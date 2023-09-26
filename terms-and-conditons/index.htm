@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Font: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* Apply The Google Font */
+        body {
+            font-family: 'Hind Siliguri' !important;
+        }
+    </style>
+
+    <title>Hishebi</title>
+</head>
+
+<body class="m-0">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div class="flex items-center">
+                    <!-- Open Drawer Button -->
+                    <button type="button"
+                        class="flex items-center p-2 w-10 h-10 justify-center text-3xl text-gray-500 rounded-md lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                        aria-controls="drawer-navigation">
+                        <i class="bi bi-list block"></i>
+                    </button>
+
+                    <!-- Brand Icon -->
+                    <a href="#" class="flex items-center">
+                        <img src="../resource/hishebi_icon.svg" class="sm:h-11 h-10 w-auto ms-2.5"
+                            alt="hishebi_online" />
+                    </a>
+                </div>
+
+                <!-- Flex Mode -->
+                <div class="hidden w-full lg:block lg:w-auto">
+                    <ul
+                        class="flex flex-col lg:flex-row font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-white">
+
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 "
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <!-- About -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">About</a>
+                        </li>
+
+                        <!-- Features Dropdown -->
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0 lg:w-auto">
+                                Features
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="z-20 hidden font-normal bg-white divide-y rounded-md shadow w-44">
+
+                                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Login Button -->
+                <button type="button"
+                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button>
+
+                <!-- If user is logged in
+                        show profile icon -->
+                <!-- <div class="w-8 h-8 overflow-hidden bg-gray-100 rounded-full cursor-pointer ring-2 ring-gray-300">
+                  
+                    <img src="../resource/user_avatar.jpg" class="h-full w-full object-cover" alt="user_name">
+                </div> -->
+
+
+            </div>
+        </nav>
+        <!-- Drawer Mode -->
+        <div id="drawer-navigation"
+            class="fixed  top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 space-y-3"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+
+            <!-- Close Drawer Button-->
+            <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-8 h-8 ms-auto block flex items-center justify-center">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2.5">
+
+                    <!-- Home -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded-md"
+                            aria-current="page">Home</a>
+                    </li>
+
+                    <!-- About -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">About</a>
+                    </li>
+
+                    <!-- Features Dropdown -->
+                    <li>
+                        <button aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 rounded-md group">
+                            Features
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul id="dropdown-example" class="hidden py-2 space-y-2" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="pb-[4rem] min-h-screen space-y-14">
+        <!-- Breadcrumbs -->
+        <header class="bg-blue-50 md:h-[11rem] sm:h-[10.5rem] h-[9.5rem] flex items-end sm:pb-7 pb-6">
+            <ul class="flex justify-center space-x-1.5 w-full font-medium">
+                <li class="text-lg text-gray-800">Home</li>
+                <li class="md:text-xl text-lg">/</li>
+                <li class="md:text-xl text-lg text-blue-500">Terms & Conditions</li>
+            </ul>
+        </header>
+
+        <section class="max-w-5xl mx-auto px-10 md:space-y-12 space-y-10">
+            <!-- Title -->
+            <h1 class='text-3xl font-semibold md:text-start text-center'>
+                Terms & Conditions
+            </h1>
+
+            <!-- Content -->
+            <article class="leading-7 text-justify">
+                By downloading or using the app, these terms will automatically apply to you - you should make sure
+                therefore
+                that you read them carefully before using the app. You're not allowed to copy or modify the app,
+                any part of the app, or our trademarks in any way. You're not allowed to attempt to extract the source
+                code
+                of the app, and you also shouldn't try to translate the app into other languages or make derivative
+                versions.
+                The app itself, and all the trademarks, copyright, database rights, and other intellectual property
+                rights related
+                to it, still belong to Droidrocks.
+                <br><br>
+                Droidrocks is committed to ensuring that the app is as useful and efficient as possible. For that
+                reason, we reserve the right to make changes to the app or to charge for its services, at any time and
+                for any reason. We will never charge you for the app or its services without making it very clear to you
+                exactly what you're paying for.
+                <br><br>
+                The Hishebi app stores and processes personal data that you have provided to us, to provide our Service.
+                It's your responsibility to keep your phone and access to the app secure. We therefore recommend that
+                you do not jailbreak or root your phone, which is the process of removing software restrictions and
+                limitations imposed by the official operating system of your device. It could make your phone vulnerable
+                to malware/viruses/malicious programs, compromise your phone's security features and it could mean that
+                the Hishebi app won't work properly or at all.
+                <br><br>
+                The app does use third-party services that declare their Terms and Conditions.
+                <br><br>
+                Link to Terms and Conditions of third-party service providers used by the app
+                <br>
+                <ul class="list-inside list-disc">
+                    <li>Google Play Services</li>
+                    <li>AdMob</li>
+                    <li>Google Analytics for Firebase</li>
+                    <li>Firebase Crashlytics</li>
+                    <li>Facebook</li>
+                    <li>Flurry Analytics</li>
+                    <li>Fathom Analytics</li>
+                    <li>Unity</li>
+                    <li>One Signal</li>
+                    <li>AppLovin</li>
+                    <li>StartApp</li>
+                </ul>
+                <br>
+                You should be aware that there are certain things that Droidrocks will not take responsibility for.
+                Certain functions of the app will require the app to have an active internet connection. The connection
+                can be Wi-Fi or provided by your mobile network provider, but Droidrocks cannot take responsibility for
+                the app not working at full functionality if you don't have access to Wi-Fi, and you don't have any of
+                your data allowance left.
+                <br> <br>
+
+                If you're using the app outside of an area with Wi-Fi, you should remember that the terms of the
+                agreement with your mobile network provider will still apply. As a result, you may be charged by your
+                mobile provider for the cost of data for the duration of the connection while accessing the app, or
+                other third-party charges. In using the app, you're accepting responsibility for any such charges,
+                including roaming data charges if you use the app outside of your home territory (i.e. region or
+                country) without turning off data roaming. If you are not the bill payer for the device on which you're
+                using the app, please be aware that we assume that you have received permission from the bill payer for
+                using the app.
+                <br> <br>
+                Along the same lines, Droidrocks cannot always take responsibility for the way you use the app i.e. You
+                need to make sure that your device stays charged - if it runs out of battery and you can't turn it on to
+                avail the Service, Droidrocks cannot accept responsibility.
+                <br> <br>
+                With respect to Droidrocks's responsibility for your use of the app, when you're using the app, it's
+                important to bear in mind that although we endeavor to ensure that it is updated and correct at all
+                times, we do rely on third parties to provide information to us so that we can make it available to you.
+                Droidrocks accepts no liability for any loss, direct or indirect, you experience as a result of relying
+                wholly on this functionality of the app.
+                <br> <br>
+                At some point, we may wish to update the app. The app is currently available on Android - the
+                requirements for the system(and for any additional systems we decide to extend the availability of the
+                app to) may change, and you'll need to download the updates if you want to keep using the app.
+                Droidrocks does not promise that it will always update the app so that it is relevant to you and/or
+                works with the Android version that you have installed on your device. However, you promise to always
+                accept updates to the application when offered to you, We may also wish to stop providing the app, and
+                may terminate use of it at any time without giving notice of termination to you. Unless we tell you
+                otherwise, upon any termination, <br>(a) the rights and licenses granted to you in these terms will end.
+                <br>(b)
+                you must stop using the app, and (if needed) delete it from your device.
+                <br> <br>
+
+                <strong>Data Loss Disclaimer :</strong>
+
+                The use of Hishebi (the "App") is at the sole risk of the user. Droidrocks ("We," "Us," or "Our") shall
+                not be held liable for any data loss experienced by the user as a result of using the App. This
+                includes, but is not limited to, any loss of user-generated data, settings, configurations, or any other
+                information stored within the App.
+                <br> <br>
+                By using the App, the user acknowledges and agrees that
+                <br> <br>
+                <strong>Backup Responsibility :</strong> It is the user's responsibility to regularly backup any
+                important data,
+                configurations, or settings from within the App to prevent data loss. We strongly recommend maintaining
+                up-to-date backups on external devices or cloud storage.
+                <br>
+                No Guarantee of Data Recovery: In the event of data loss, Droidrocks does not guarantee the ability to
+                recover lost data. We will make reasonable efforts to assist users in such situations, but we do not
+                provide any warranty or assurance regarding the recovery of lost data.
+                User's Sole Liability: The user agrees that any loss of data incurred while using the App is solely the
+                user's responsibility. Droidrocks, its employees, affiliates, and partners will not be held liable for
+                any direct, indirect, incidental, special, or consequential damages arising from data loss.
+                Limitation of Liability: To the fullest extent permitted by applicable law, Droidrocks's total
+                liability, in connection with data loss or any other matters related to the App, shall not exceed the
+                amount paid by the user for the App or the service, if applicable.
+                User's Acceptance: By using the App, the user agrees to the terms and conditions outlined in this Data
+                Loss Disclaimer. If the user does not agree with these terms, they should refrain from using the App.
+                Changes to This Terms and Conditions
+                <br> <br>
+                We may update our Terms and Conditions from time to time. Thus, you are advised to review this page
+                periodically for any changes. We will notify you of any changes by posting the new Terms and Conditions
+                on this page.
+                <br> <br>
+                These terms and conditions are effective as of 2023-08-24
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="bg-blue-50">
+        <div class="mx-auto w-full max-w-5xl min-h-[19.5rem] flex items-center px-4 py-10">
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-12 gap-x-5 w-full">
+
+                <!-- Logo_&_Social handles -->
+                <div class="flex lg:justify-start justify-center sm:order-none order-last">
+                    <div class="md:space-y-12 space-y-10">
+                        <!-- Brand icon -->
+                        <img src="../resource/hishebi_icon.svg" class="lg:h-16 sm:h-14 h-16 sm:mx-0 mx-auto"
+                            alt="Hisebi" loading="lazy" />
+
+                        <!-- Our Social media links -->
+                        <div class="flex">
+
+                            <!-- LinkedIn -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/linkedin.png"
+                                    loading="lazy" alt="linkedin">
+                            </a>
+
+                            <!-- Youtube -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/youtube.png"
+                                    loading="lazy" alt="youtube">
+                            </a>
+
+                            <!-- FB -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/fb.png"
+                                    loading="lazy" alt="facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8 relative md:right-0 right-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">About</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <li>
+                                <a href="" class="hover:underline">About</a>
+                            </li>
+                            <li>
+                                <a href="" class="hover:underline">Privacy Policy </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="hover:underline">Terms & conditions </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide"> Contact</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <!-- Phone -->
+                            <li>
+                                <a><i class="bi bi-telephone-fill text-xs pe-3"></i>+88 01717932348</a>
+                            </li>
+                            <!-- Email -->
+                            <li>
+                                <a><i class="bi bi-envelope-fill text-sm pe-3"></i>hisebi.app@gmail.com</a>
+                            </li>
+
+                            <!-- Address -->
+                            <li class="flex items-center">
+                                <i class="bi bi-geo-alt-fill text-sm pe-3 block"></i> <span class="block">Municipal
+                                    Market,<br>Syed Mujtoba Ali Road,<br> Moulvibazar 3200</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Join our community -->
+                <div class="flex md:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">Join our community</h2>
+
+                        <!-- button -->
+                        <a href="https://www.facebook.com/groups/235096546107840/" target="_blank"
+                            class="block flex sm:justify-start justify-center">
+                            <img src="../resource/icons/social_media/fb_group.png" class="h-14 md:md:hover:shadow-sm"
+                                alt="hisebi-group" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Copywrite -->
+        <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
+    </footer>
+
+
+    <!-- Flowbite 
+    * You must include this cdn in your app -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

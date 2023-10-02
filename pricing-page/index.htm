@@ -187,378 +187,491 @@
         </div>
     </header>
 
-    <main class="pb-[4rem] min-h-screen md:pt-28 pt-24">
+    <main class="pb-[4rem] min-h-screen md:pt-28 pt-24 bg-gray-50">
 
-        <section class="max-w-5xl mx-auto px-10 space-y-8">
+        <section class="max-w-5xl mx-auto px-10 space-y-11">
             <!-- Title -->
             <h1 class='text-3xl font-semibold text-center'>
                 Choose your plan
             </h1>
 
             <!-- Packages -->
-            <div id=" packages" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-8">
+            <div id="packages"
+                class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-5 lg:gap-y-5 md:gap-y-10 gap-y-12">
 
-                <!--  1 months -->
+                <!--  1 Month -->
                 <div
-                    class="lg:max-w-[18.75rem] max-w-[17.75rem] w-full mx-auto bg-blue-50 rounded-sm md:shadow-md shadow-sm">
-                    <header class="bg-green-500 grid grid-cols-2 rounded-t-sm">
+                    class="max-w-[19.5rem] min-h-[36.5rem] w-full mx-auto rounded-md outline-blue-500 group hover:outline outline-2 transation-hover duration-50 px-2.5 bg-white">
+
+                    <!-- Package Type -->
+                    <div class="bg-blue-500 px-2.5 py-0.5 w-fit mx-auto rounded-md relative bottom-3">
+                        <h1 class="text-white uppercase text-sm">Basic</h1>
+                    </div>
+
+                    <div class="pt-7 space-y-6">
                         <!-- Title -->
-                        <div class="py-3 px-4">
-                            <h3 class="text-2xl font-semibold text-white tracking-wider">
-                                VIP
+                        <h3 class="text-2xl font-semibold text-blue-500 tracking-wide text-center">
+                            <i class="bi bi-gem pe-1.5"></i>Premium Silver
+                        </h3>
+
+                        <!-- Package Type -->
+                        <div class="bg-orange-500 px-2.5 py-1 w-fit mx-auto rounded-full">
+                            <h1 class="text-white text-sm font-semibold">Save 10%</h1>
+                        </div>
+
+                        <div class="text-center">
+                            <!-- Price -->
+                            <h1 class="text-3xl space-x-0.5">
+                                <!-- Main Price -->
+                                <span class=" font-thin text-gray-400">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span class="line-through">
+                                        54.00
+                                    </span>
+                                </span>
+
+                                <!-- Discounted price -->
+                                <span class="font-bold">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span>
+                                        49
+                                    </span>
+
+                                    <span class="text-lg relative top-1">
+                                        /
+                                    </span>
+                                </span>
+                            </h1>
+
+                            <!-- Validity -->
+                            <h3 class="text-blue-500 font-semibold">
+                                1 Month Validity
                             </h3>
                         </div>
 
-                        <!-- Discount
-                        <div>
-                            <div class="bg-red-500 p-1 w-fit  ms-auto rounded-tr-sm rounded-bl-md">
-                                <h1 class="text-white text-lg ">
-                                    <span class="font-medium">Save</span> <span class="font-semibold">10%</span>
-                                </h1>
-                            </div>
-                        </div>
-                         -->
-                    </header>
+                        <!-- Divider -->
+                        <hr>
 
-                    <div class="px-9 pb-5">
-                        <!-- Feature list -->
-                        <ul class="my-8">
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                        <!-- Buy Package -->
+                        <a class="block" href="">
+                            <button type="button"
+                                class="text-gray-400 text-xl outline outline-1 outline-gray-400 hover:text-white  hover:bg-blue-600 transation-all duration-150 tracking-wide rounded-md py-2 w-11/12 mx-auto block">Buy
+                                Package</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Features -->
+                    <div class="py-7 px-6">
+                        <ul class="w-fit mx-auto space-y-3.5">
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-person-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    Online
-                                </h1>
-                            </li>
-
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    No Ads
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    All features access
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
+                                <h1>
                                     Create account
                                 </h1>
                             </li>
 
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-badge-ad-fill"></i>
                                 </div>
+                                <h1>
+                                    100% Ads free
+                                </h1>
+                            </li>
 
-                                <h1 class="col-span-10">
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-database-fill-check"></i>
+                                </div>
+                                <h1>
                                     Auto data backup
                                 </h1>
                             </li>
-                        </ul>
 
-                        <div class="space-y-2">
-                            <!-- Duration -->
-                            <div class="bg-blue-300 px-2.5 py-1 w-fit rounded-md mx-auto">
-                                <h1 class="text-black font-medium">
-                                    1 Month
-                                </h1>
-                            </div>
-
-                            <!-- Buy Package -->
-                            <div class="flex justify-center">
-                                <button type="button"
-                                    class="text-white bg-blue-500 hover:bg-blue-600 transation-all duration-150 font-medium tracking-wide rounded-sm px-9 py-1.5">
-                                    49 Tk
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6 Months -->
-                <div
-                    class="lg:max-w-[18.75rem] max-w-[17.75rem] w-full mx-auto bg-blue-50 rounded-sm md:shadow-md shadow-sm">
-                    <header class="bg-green-500 grid grid-cols-2 rounded-t-sm">
-                        <!-- Title -->
-                        <div class="py-3 px-4">
-                            <h3 class="text-2xl font-semibold text-white tracking-wider">
-                                VIP
-                            </h3>
-                        </div>
-
-                        <!-- Discount
-                        <div>
-                            <div class="bg-red-500 p-1 w-fit  ms-auto rounded-tr-sm rounded-bl-md">
-                                <h1 class="text-white text-lg ">
-                                    <span class="font-medium">Save</span> <span class="font-semibold">10%</span>
-                                </h1>
-                            </div>
-                        </div>
-                         -->
-                    </header>
-
-                    <div class="px-9 pb-5">
-                        <!-- Feature list -->
-                        <ul class="my-8">
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-globe-asia-australia"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
+                                <h1>
                                     Online
                                 </h1>
                             </li>
 
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    No Ads
+                                <h1>
+                                    Excel file export
                                 </h1>
                             </li>
 
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-lock2-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    All features access
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    Create account
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    Auto data backup
+                                <h1>
+                                    App lock
                                 </h1>
                             </li>
                         </ul>
 
-                        <div class="space-y-2">
-                            <!-- Duration -->
-                            <div class="bg-blue-300 px-2.5 py-1 w-fit rounded-md mx-auto">
-                                <h1 class="text-black font-medium">
-                                    6 Months
-                                </h1>
-                            </div>
-
-                            <!-- Buy Package -->
-                            <div class="flex justify-center">
-                                <button type="button"
-                                    class="text-white bg-blue-500 hover:bg-blue-600 transation-all duration-150 font-medium tracking-wide rounded-sm px-9 py-1.5">
-                                    299 Tk
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- 1 Year -->
+                <!--  1 Year -->
                 <div
-                    class="lg:max-w-[18.75rem] max-w-[17.75rem] w-full mx-auto bg-blue-50 rounded-sm md:shadow-md shadow-sm">
-                    <header class="bg-green-500 grid grid-cols-2 rounded-t-sm">
+                    class="max-w-[19.5rem] min-h-[36.5rem] w-full mx-auto rounded-md outline-blue-500 group outline outline-2 px-2.5 bg-white">
+
+                    <!-- Package Type -->
+                    <div class="bg-blue-500 px-2.5 py-0.5 w-fit mx-auto rounded-md relative bottom-3">
+                        <h1 class="text-white uppercase text-sm">Most popular </h1>
+                    </div>
+
+                    <div class="pt-7 space-y-6">
                         <!-- Title -->
-                        <div class="py-3 px-4">
-                            <h3 class="text-2xl font-semibold text-white tracking-wider">
-                                VIP
+                        <h3 class="text-2xl font-semibold text-blue-500 tracking-wide text-center">
+                            <i class="bi bi-gem pe-1.5"></i>Premium Platinum
+                        </h3>
+
+                        <!-- Package Type -->
+                        <div class="bg-orange-500 px-2.5 py-1 w-fit mx-auto rounded-full">
+                            <h1 class="text-white text-sm font-semibold">Save 20%</h1>
+                        </div>
+
+                        <div class="text-center">
+                            <!-- Price -->
+                            <h1 class="text-3xl space-x-0.5">
+                                <!-- Main Price -->
+                                <span class=" font-thin text-gray-400">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span class="line-through">
+                                        588.00
+                                    </span>
+                                </span>
+
+                                <!-- Discounted price -->
+                                <span class="font-bold">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span>
+                                        469
+                                    </span>
+
+                                    <span class="text-lg relative top-1">
+                                        /
+                                    </span>
+                                </span>
+                            </h1>
+
+                            <!-- Validity -->
+                            <h3 class="text-blue-500 font-semibold">
+                                1 Year Validity
                             </h3>
                         </div>
 
-                        <!-- Discount -->
-                        <div>
-                            <div class="bg-red-500 p-1 w-fit  ms-auto rounded-tr-sm rounded-bl-md">
-                                <h1 class="text-white text-lg ">
-                                    <span class="font-medium">Save</span> <span class="font-semibold">10%</span>
-                                </h1>
-                            </div>
-                        </div>
-                    </header>
+                        <!-- Divider -->
+                        <hr>
 
-                    <div class="px-9 pb-5">
-                        <!-- Feature list -->
-                        <ul class="my-8">
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                        <!-- Buy Package -->
+                        <a class="block" href="">
+                            <button type="button"
+                                class="text-gray-400 text-xl outline outline-1 outline-gray-400 hover:text-white  hover:bg-blue-600 transation-all duration-150 tracking-wide rounded-md py-2 w-11/12 mx-auto block">Buy
+                                Package</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Features -->
+                    <div class="py-7 px-6">
+                        <ul class="w-fit mx-auto space-y-3.5">
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-person-fill"></i>
                                 </div>
+                                <h1>
+                                    Create account
+                                </h1>
+                            </li>
 
-                                <h1 class="col-span-10">
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-badge-ad-fill"></i>
+                                </div>
+                                <h1>
+                                    100% Ads free
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-database-fill-check"></i>
+                                </div>
+                                <h1>
+                                    Auto data backup
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-globe-asia-australia"></i>
+                                </div>
+                                <h1>
                                     Online
                                 </h1>
                             </li>
 
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    No Ads
+                                <h1>
+                                    Excel file export
                                 </h1>
                             </li>
 
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-lock2-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    All features access
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    Create account
-                                </h1>
-                            </li>
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
-                                    Auto data backup
+                                <h1>
+                                    App lock
                                 </h1>
                             </li>
                         </ul>
 
-                        <div class="space-y-2">
-                            <!-- Duration -->
-                            <div class="bg-blue-300 px-2.5 py-1 w-fit rounded-md mx-auto">
-                                <h1 class="text-black font-medium">
-                                    1 Year
-                                </h1>
-                            </div>
-
-                            <!-- Buy Package -->
-                            <div class="flex justify-center">
-                                <button type="button"
-                                    class="text-white bg-blue-500 hover:bg-blue-600 transation-all duration-150 font-medium tracking-wide rounded-sm px-9 py-1.5">
-                                    539 Tk
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
+
+
+                <!--  6 Months -->
+                <div
+                    class="max-w-[19.5rem] min-h-[36.5rem] w-full mx-auto rounded-md outline-blue-500 group hover:outline outline-2 transation-hover duration-50 px-2.5 bg-white">
+
+                    <!-- Package Type -->
+                    <div class="bg-blue-500 px-2.5 py-0.5 w-fit mx-auto rounded-md relative bottom-3">
+                        <h1 class="text-white uppercase text-sm">Regular</h1>
+                    </div>
+
+                    <div class="pt-7 space-y-6">
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold text-blue-500 tracking-wide text-center">
+                            <i class="bi bi-gem pe-1.5"></i>Premium Gold
+                        </h3>
+
+                        <!-- Package Type -->
+                        <div class="bg-orange-500 px-2.5 py-1 w-fit mx-auto rounded-full">
+                            <h1 class="text-white text-sm font-semibold">Save 10%</h1>
+                        </div>
+
+                        <div class="text-center">
+                            <!-- Price -->
+                            <h1 class="text-3xl space-x-0.5">
+                                <!-- Main Price -->
+                                <span class=" font-thin text-gray-400">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span class="line-through">
+                                        294.00
+                                    </span>
+                                </span>
+
+                                <!-- Discounted price -->
+                                <span class="font-bold">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span>
+                                        264
+                                    </span>
+
+                                    <span class="text-lg relative top-1">
+                                        /
+                                    </span>
+                                </span>
+                            </h1>
+
+                            <!-- Validity -->
+                            <h3 class="text-blue-500 font-semibold">
+                                6 Months Validity
+                            </h3>
+                        </div>
+
+                        <!-- Divider -->
+                        <hr>
+
+                        <!-- Buy Package -->
+                        <a class="block" href="">
+                            <button type="button"
+                                class="text-gray-400 text-xl outline outline-1 outline-gray-400 hover:text-white  hover:bg-blue-600 transation-all duration-150 tracking-wide rounded-md py-2 w-11/12 mx-auto block">Buy
+                                Package</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Features -->
+                    <div class="py-7 px-6">
+                        <ul class="w-fit mx-auto space-y-3.5">
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                                <h1>
+                                    Create account
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-badge-ad-fill"></i>
+                                </div>
+                                <h1>
+                                    100% Ads free
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-database-fill-check"></i>
+                                </div>
+                                <h1>
+                                    Auto data backup
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-globe-asia-australia"></i>
+                                </div>
+                                <h1>
+                                    Online
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-earmark-excel-fill"></i>
+                                </div>
+                                <h1>
+                                    Excel file export
+                                </h1>
+                            </li>
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-file-lock2-fill"></i>
+                                </div>
+                                <h1>
+                                    App lock
+                                </h1>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
 
                 <!--  Free -->
                 <div
-                    class="lg:max-w-[18.75rem] max-w-[17.75rem] w-full mx-auto bg-blue-50 rounded-sm md:shadow-md shadow-sm order-first md:order-none">
-                    <header class="bg-blue-400 grid grid-cols-2 rounded-t-sm">
+                    class="max-w-[19.5rem] min-h-[36.5rem] w-full mx-auto rounded-md outline-blue-500 group hover:outline outline-2 transation-hover duration-50 px-2.5 bg-white">
+
+                    <!-- Package Type -->
+                    <!-- <div class="bg-blue-500 px-2.5 py-0.5 w-fit mx-auto rounded-md relative bottom-3">
+                        <h1 class="text-white uppercase text-sm">Regular</h1>
+                    </div> -->
+
+                    <div class="pt-10 space-y-6">
                         <!-- Title -->
-                        <div class="py-3 px-4">
-                            <h3 class="text-2xl font-semibold text-white tracking-wider">
-                                Free
-                            </h3>
+                        <h3 class="text-2xl font-semibold text-blue-500 tracking-wide text-center">
+                            <i class="bi bi-people pe-1.5"></i>Free Forever
+                        </h3>
+
+                        <!-- Package Type -->
+                        <!-- <div class="bg-orange-500 px-2.5 py-1 w-fit mx-auto rounded-full">
+                            <h1 class="text-white text-sm font-semibold">Save 10%</h1>
+                        </div> -->
+
+                        <div class="text-center">
+                            <!-- Price -->
+                            <h1 class="text-3xl space-x-0.5">
+                                <!--price -->
+                                <span class="font-bold">
+                                    <span class="text-xl relative bottom-3 left-0.5">
+                                        ৳
+                                    </span>
+                                    <span>
+                                        0.00
+                                    </span>
+
+                                    <!-- <span class="text-lg relative top-1">
+                                        /
+                                    </span> -->
+                                </span>
+                            </h1>
+
+                            <!-- Validity -->
+                            <!-- <h3 class="text-blue-500 font-semibold">
+                                6 Months Validity
+                            </h3> -->
                         </div>
 
-                        <!-- Discount
-                <div>
-                     <div class="bg-red-500 p-1 w-fit  ms-auto rounded-tr-sm rounded-bl-md">
-                    <h1 class="text-white text-lg ">
-                  <span class="font-medium">Save</span> <span class="font-semibold">10%</span>
-                    </h1>
-              </div>
-        </div>
-       -->
-                    </header>
+                        <!-- Divider -->
+                        <div class="pt-10">
+                            <hr>
+                        </div>
 
-                    <div class="px-9 pb-5">
-                        <!-- Feature list -->
-                        <ul class="my-8">
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                        <!-- Open App -->
+                        <a class="block" href="">
+                            <button type="button"
+                                class="text-gray-400 text-xl outline outline-1 outline-gray-400 hover:text-white  hover:bg-blue-600 transation-all duration-150 tracking-wide rounded-md py-2 w-11/12 mx-auto block">Open
+                                App</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Features -->
+                    <div class="py-7 px-6">
+                        <ul class="w-fit mx-auto space-y-3.5">
+
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-badge-ad-fill"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    Offline
-                                </h1>
-                            </li>
-
-
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
-                                </div>
-
-                                <h1 class="col-span-10">
+                                <h1>
                                     Ads
                                 </h1>
                             </li>
 
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-database-fill-check"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    Limited features
+                                <h1>
+                                    Manual data backup
                                 </h1>
                             </li>
 
-                            <li class="text-lg grid grid-cols-12 gap-x-8 font-medium">
-                                <div class="col-span-1">
-                                    <i class="bi bi-check-lg"></i>
+                            <li class="flex space-x-2.5">
+                                <div class="text-blue-500">
+                                    <i class="bi bi-globe-asia-australia"></i>
                                 </div>
-
-                                <h1 class="col-span-10">
-                                    Manual data backup
+                                <h1>
+                                    Offline
                                 </h1>
                             </li>
                         </ul>
 
-                        <!-- Open app -->
-                        <div class="flex justify-center">
-                            <button type="button"
-                                class="text-white bg-blue-500 hover:bg-blue-600 transation-all duration-150 font-medium tracking-wide rounded-sm px-5 py-1.5">
-                                Open app
-                            </button>
-                        </div>
                     </div>
                 </div>
 

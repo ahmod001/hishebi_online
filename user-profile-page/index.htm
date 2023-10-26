@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Font: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* Apply The Google Font */
+        body {
+            font-family: 'Hind Siliguri' !important;
+        }
+    </style>
+
+    <title>Hishebi</title>
+</head>
+
+<body class="m-0">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div class="flex items-center">
+                    <!-- Open Drawer Button -->
+                    <button type="button"
+                        class="flex items-center p-2 w-10 h-10 justify-center text-3xl text-gray-500 rounded-md lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                        aria-controls="drawer-navigation">
+                        <i class="bi bi-list block"></i>
+                    </button>
+
+                    <!-- Brand Icon -->
+                    <a href="#" class="flex items-center">
+                        <img src="../resource/hishebi_icon.svg" class="sm:h-11 h-10 w-auto ms-2.5"
+                            alt="hishebi_online" />
+                    </a>
+                </div>
+
+                <!-- Flex Mode -->
+                <div class="hidden w-full lg:block lg:w-auto">
+                    <ul
+                        class="flex flex-col lg:flex-row font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-white">
+
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 "
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <!-- About -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">About</a>
+                        </li>
+
+                        <!-- Features Dropdown -->
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0 lg:w-auto">
+                                Features
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="z-20 hidden font-normal bg-white divide-y rounded-md shadow w-44">
+
+                                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Login Button -->
+                <!-- <button type="button"
+                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
+
+                <!-- If user is logged in
+                        show profile icon -->
+
+                <div role="button" id="dropdownNavbarLink" data-dropdown-toggle="dropdownShortcut"
+                    class="w-9 h-9 overflow-hidden  rounded-full">
+                    <img src="../resource/icons/user_profile.png" class="h-full w-full object-cover" alt="user_name">
+                </div>
+                <!-- Dropdown menu -->
+                <div id="dropdownShortcut" class="z-20 hidden font-normal bg-white divide-y rounded-md shadow w-44">
+
+                    <ul class="py-2 text-sm text-gray-800 " aria-labelledby="dropdownLargeButton">
+                        <!-- Profile -->
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 font-semibold tracking-wide">
+                                Profile
+                            </a>
+                        </li>
+                        <!-- Divider -->
+                        <hr>
+
+                        <!-- Logout -->
+                        <li>
+                            <a role="button" class="block px-4 py-2 hover:bg-gray-100">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Drawer Mode -->
+        <div id="drawer-navigation"
+            class="fixed  top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 space-y-3"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+
+            <!-- Close Drawer Button-->
+            <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-8 h-8 ms-auto block flex items-center justify-center">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2.5">
+
+                    <!-- Home -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded-md"
+                            aria-current="page">Home</a>
+                    </li>
+
+                    <!-- About -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">About</a>
+                    </li>
+
+                    <!-- Features Dropdown -->
+                    <li>
+                        <button aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 rounded-md group">
+                            Features
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul id="dropdown-example" class="hidden py-2 space-y-2" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="pb-[4rem] md:pt-32 pt-28 min-h-screen">
+        <!-- FEATURES -->
+        <section class="space-y-10 px-4 max-w-5xl mx-auto">
+            <!-- Profile Info
+                 Read-Mode -->
+            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
+                <header class="px-8 flex justify-between">
+                    <!-- Title -->
+                    <h3 class="text-2xl font-medium">
+                        Profile info
+                    </h3>
+
+                    <!-- Action -->
+                    <h3 class="text-2xl font-medium text-blue-500 cursor-pointer hover:text-blue-600">
+                        Edit
+                    </h3>
+                </header>
+
+                <div class="pt-3.5">
+                    <!-- Divider -->
+                    <hr class="border-gray-200 border">
+
+                    <div class="p-8 text-lg space-y-4">
+                        <!-- Name -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Name:</span>
+                            <span class="ps-1.5 font-semibold">Ahmod Hasan </span>
+                        </h1>
+
+                        <!-- Email -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Email:</span>
+                            <span class="ps-1.5 font-semibold ">hasan@hishebi.app</span>
+                        </h1>
+
+                        <!-- Phone -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Phone:</span>
+                            <span class="ps-1.5 font-semibold "> 01734231234 </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Info
+                 Edit-Mode -->
+            <!-- Remove "Hidden" class to visible Edit-mode -->
+            <div class="hidden max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
+                <header class="px-8 flex justify-between">
+                    <!-- Title -->
+                    <h3 class="text-2xl font-medium">
+                        Profile info
+                    </h3>
+
+                    <!-- Action -->
+                    <h3 class="text-2xl font-medium text-blue-500 cursor-pointer hover:text-blue-600">
+                        Done
+                    </h3>
+                </header>
+
+                <div class="pt-3.5">
+                    <!-- Divider -->
+                    <hr class="border-gray-200 border">
+
+                    <div class="sm:p-8 p-6 text-lg space-y-4">
+                        <!-- Name -->
+                        <div class="grid grid-cols-6 space-x-4">
+                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Name:</span>
+
+                            <div class="col-span-5">
+                                <input id="name" value="Ahmod Hasan" type="text" placeholder="Enter name"
+                                    autocomplete="name"
+                                    class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="grid grid-cols-6 space-x-4">
+                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Email:</span>
+
+                            <div class="col-span-5">
+                                <input id="email" value="hasan@hishebi.app" type="email" placeholder="Enter email"
+                                    autocomplete="email"
+                                    class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 w-full px-2 py-1.5 ">
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="grid grid-cols-6 space-x-4">
+                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Phone:</span>
+
+                            <div class="col-span-5 ">
+                                <input id="phone" value="01734231234" min="0" type="number" placeholder="Enter phone"
+                                    autocomplete="email"
+                                    class="bg-blue-100  border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- My Subscription -->
+            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
+                <header class="px-8">
+                    <!-- Title -->
+                    <h3 class="text-2xl font-medium">
+                        My Subscription
+                    </h3>
+                </header>
+
+                <div class="pt-3.5">
+                    <!-- Divider -->
+                    <hr class="border-gray-200 border">
+
+                    <div class="p-8 text-lg space-y-4">
+                        <!-- Current Package-->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Package:</span>
+                            <span class="ps-1.5 font-semibold">Premium Platinum </span>
+                        </h1>
+
+                        <!-- Validation -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Validation:</span>
+                            <span class="ps-1.5 font-semibold ">1 year</span>
+                        </h1>
+
+                        <!-- Expire date -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Expire date:</span>
+                            <span class="ps-1.5 font-semibold "> 03 Jan 2024</span>
+                        </h1>
+
+                        <!-- Status -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Status:</span>
+                            <!-- Active -->
+                            <!-- <span class="ps-1.5 ">
+                                <span class="text-green-400 font-semibold">Active</span>
+                            </span> -->
+
+                            <!-- Pending -->
+                            <span class="ps-1.5 ">
+                                <span class="text-blue-500  font-semibold">Pending</span>
+                            </span>
+
+                            <!--  Expired -->
+                            <!-- <span class="ps-1.5 ">
+                                <span class="text-red-600  font-semibold">Expired</span>
+                                <a class="text-blue-500 hover:text-blue-600 text-sm  font-medium underline ms-2" href="">
+                                    Buy new package
+                                </a>
+                            </span> -->
+                        </h1>
+
+                        <!-- If the status is "Pending" show notice -->
+                        <span class="text-green-500 text-sm font-medium block ">
+                            ২৪ ঘন্টার ভেতরে আপনার প্যাকেজটি এক্টিভ করা হবে!
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment history   -->
+            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
+                <header class="px-8">
+                    <!-- Title -->
+                    <h3 class="text-2xl font-medium">
+                        Payment history
+                    </h3>
+                </header>
+
+                <!--  -->
+                <div class="pt-3.5">
+                    <!-- Divider -->
+                    <hr class="border-gray-200 border">
+
+                    <div class="p-8 text-lg space-y-4">
+                        <!-- Date -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Date</span>
+                            <span class="ps-1.5 font-semibold">10 Oct 2023 </span>
+                        </h1>
+
+                        <!-- Payment method -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Payment method:</span>
+                            <span class="ps-1.5 font-semibold ">Bkash</span>
+                        </h1>
+
+                        <!-- Price -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Price:</span>
+                            <span class="ps-1.5 font-semibold "> ৳49 </span>
+
+                            <!-- Package -->
+                            <h1 class=" tracking-wide">
+                                <span class="text-gray-600">Package:</span>
+                                <span class="ps-1.5 font-semibold "> Premium Platinum</span>
+                            </h1>
+                    </div>
+                </div>
+
+
+                <!--  -->
+                <div class="pt-3.5">
+                    <!-- Divider -->
+                    <hr class="border-gray-200 border">
+
+                    <div class="p-8 text-lg space-y-4">
+                        <!-- Date -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Date</span>
+                            <span class="ps-1.5 font-semibold">10 Oct 2023 </span>
+                        </h1>
+
+                        <!-- Payment method -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Payment method:</span>
+                            <span class="ps-1.5 font-semibold ">Bkash</span>
+                        </h1>
+
+                        <!-- Price -->
+                        <h1 class=" tracking-wide">
+                            <span class="text-gray-600">Price:</span>
+                            <span class="ps-1.5 font-semibold "> ৳49 </span>
+
+                            <!-- Package -->
+                            <h1 class=" tracking-wide">
+                                <span class="text-gray-600">Package:</span>
+                                <span class="ps-1.5 font-semibold "> Premium Platinum</span>
+                            </h1>
+                    </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="bg-blue-50">
+        <div class="mx-auto w-full max-w-5xl min-h-[19.5rem] flex items-center px-4 py-10">
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-12 gap-x-5 w-full">
+
+                <!-- Logo_&_Social handles -->
+                <div class="flex lg:justify-start justify-center sm:order-none order-last">
+                    <div class="md:space-y-12 space-y-10">
+                        <!-- Brand icon -->
+                        <img src="../resource/hishebi_icon.svg" class="lg:h-16 sm:h-14 h-16 sm:mx-0 mx-auto"
+                            alt="Hisebi" loading="lazy" />
+
+                        <!-- Our Social media links -->
+                        <div class="flex">
+
+                            <!-- LinkedIn -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/linkedin.png"
+                                    loading="lazy" alt="linkedin">
+                            </a>
+
+                            <!-- Youtube -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/youtube.png"
+                                    loading="lazy" alt="youtube">
+                            </a>
+
+                            <!-- FB -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/fb.png"
+                                    loading="lazy" alt="facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8 relative md:right-0 right-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">About</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <li>
+                                <a href="" class="hover:underline">About</a>
+                            </li>
+                            <li>
+                                <a href="" class="hover:underline">Privacy Policy </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="hover:underline">Terms & conditions </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide"> Contact</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <!-- Phone -->
+                            <li>
+                                <a><i class="bi bi-telephone-fill text-xs pe-3"></i>+88 01717932348</a>
+                            </li>
+                            <!-- Email -->
+                            <li>
+                                <a><i class="bi bi-envelope-fill text-sm pe-3"></i>hisebi.app@gmail.com</a>
+                            </li>
+
+                            <!-- Address -->
+                            <li class="flex items-center">
+                                <i class="bi bi-geo-alt-fill text-sm pe-3 block"></i> <span class="block">Municipal
+                                    Market,<br>Syed Mujtoba Ali Road,<br> Moulvibazar 3200</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Join our community -->
+                <div class="flex md:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">Join our community</h2>
+
+                        <!-- button -->
+                        <a href="https://www.facebook.com/groups/235096546107840/" target="_blank"
+                            class="block flex sm:justify-start justify-center">
+                            <img src="../resource/icons/social_media/fb_group.png" class="h-14 md:md:hover:shadow-sm"
+                                alt="hisebi-group" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Copywrite -->
+        <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
+    </footer>
+
+
+    <!-- Flowbite 
+    * You must include this cdn in your app -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

@@ -254,6 +254,7 @@
                     </div>
                 </div>
 
+                <!--   Your package -->
                 <div
                     class="max-w-[25rem] w-full lg:space-y-16 space-y-8 pt-4 md:me-auto lg:ms-0 mx-auto order-first lg:order-none">
                     <header class="flex justify-between">
@@ -263,20 +264,20 @@
                         </h3>
                     </header>
                     <div class="p-8 text-lg space-y-7 shadow-md rounded-sm">
-                        <header class="space-y-3.5">
+                        <header class="sm:space-y-4 space-y-3.5">
                             <!-- Package Type -->
-                            <div class="bg-blue-500  px-2 py-0.5 w-fit rounded-md relative bottom-3">
+                            <div class="bg-blue-500 px-2 py-0.5 w-fit rounded-md">
                                 <h1 class="text-white uppercase text-sm">Most popular </h1>
                             </div>
 
                             <div class="flex justify-between">
                                 <!-- Title -->
-                                <h3 class="text-2xl font-semibold text-blue-500 ">
+                                <h3 class="sm:text-2xl text-xl font-semibold text-blue-500 ">
                                     <i class="bi bi-gem pe-1.5 "></i>Premium Platinum
                                 </h3>
 
                                 <!-- Price -->
-                                <h1 class="text-2xl space-x-0.5">
+                                <h1 class="sm:text-2xl text-xl  space-x-0.5">
                                     <span class="font-bold">
                                         <span class="text-xl relative bottom-3 left-0.5">
                                             ৳
@@ -385,31 +386,39 @@
                     </form>
                 </div>
 
-                <!-- Payment Details -->
+                <!-- Payment Details 
+                        - Nagad = Send Money
+                        - Bkash = Send Money
+                        - Rocket = Make Payment    
+                -->
                 <div class="max-w-2xl">
                     <header
                         class="flex justify-between items-center rounded-sm outline outline-gray-100 lg:px-5 lg:py-5 px-4 py-5 mb-1.5">
                         <!-- Title -->
                         <h3 class="lg:text-2xl text-xl font-medium tracking-wide">
-                            Make Payment
+                            Send Money
                             <span class="uppercase">Bkash</span>
                         </h3>
 
-                        <!-- Marchent Logo
+                        <!-- Gateway Logo
                         - Change "Src" path dynamically according selected payment method -->
                         <img class="lg:max-h-10 max-h-8" src="/resource/icons/payments/bkash.jpg" alt="bkash">
                     </header>
 
                     <div class="space-y-10 lg:p-5 p-4 rounded-sm outline outline-gray-200 bg-gray-100 ">
                         <div>
-                            <!-- Basic Instruction -->
-                            <p class="font-medium"><b>Make Payment</b> করে আপনার <span>বিকাশ</span> নাম্বার এবং TrxID
+                            <!-- Basic Instruction 
+                                    - Nagad = Send Money
+                                    - Bkash = Send Money
+                                    - Rocket = Make Payment   
+                                 -->
+                            <p class="font-medium"><b>Send Money</b> করে আপনার <span>বিকাশ</span> নাম্বার এবং TrxID
                                 (Transaction ID) <br>
                                 Add করে Order place করুন
                             </p>
                         </div>
 
-                        <!-- Marchent Info -->
+                        <!-- Personal/Marchent Info -->
                         <div>
                             <hr class="block border border-dashed border-gray-400">
                             <div class="grid sm:grid-cols-3 grid-cols-1 gap-7 mt-9">
@@ -423,15 +432,21 @@
 
                                         <!-- Copy Number -->
                                         <button
-                                            class="flex space-x-1.5 bg-blue-100 hover:bg-blue-200 transiton-hover duration-200 px-2 py-1.5 rounded-md text-sm font-medium">
-                                            <i class="bi bi-clipboard block"></i> <span class="block">Copy</span>
+                                            class="flex items-center space-x-1.5 bg-blue-100 hover:bg-blue-200 transiton-hover duration-200 px-2 py-1.5 rounded-md text-sm font-medium">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
+                                              </svg> <span class="block">Copy</span>
                                         </button>
                                     </div>
 
-                                    <!--Account Type -->
+                                    <!--Account Type 
+                                            - Nagad = Personal
+                                            - Bkash = Personal
+                                            - Rocket = Merchant
+                                     -->
                                     <h1 class=" tracking-wide">
                                         <span class="text-gray-700 font-medium">Account Type:</span>
-                                        <span class="ps-0.5 font-semibold">Merchant</span>
+                                        <span class="ps-0.5 font-semibold">Personal</span>
                                     </h1>
 
                                     <!-- Total Amount -->
@@ -485,12 +500,12 @@
 
                     <!-- Agree with Terms and conditions -->
                     <div class="flex items-center mt-3.5">
-                        <div class="flex items-center h-5">
+                        <div class="flex items-center h-full ">
                             <input id="agree" type="checkbox" value="true"
                                 class="w-4 h-4 border border-gray-300 rounded bg-gray-50">
                         </div>
-                        <div>
-                            <label for="agree" class="ml-2.5 text-base text-gray-900 cursor-pointer">I have read and
+                        <div class="ml-3 sm:ml-2.5">
+                            <label for="agree" class="text-base text-gray-900 cursor-pointer">I have read and
                                 agree
                                 to the website
                             </label>

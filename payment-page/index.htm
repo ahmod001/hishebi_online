@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google Font: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* Apply The Google Font */
+        body {
+            font-family: 'Hind Siliguri' !important;
+        }
+    </style>
+
+    <title>Hishebi</title>
+</head>
+
+<body class="m-0">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="bg-white fixed top-0 w-full border-gray-200 shadow-md z-10">
+            <div class="max-w-5xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div class="flex items-center">
+                    <!-- Open Drawer Button -->
+                    <button type="button"
+                        class="flex items-center p-2 w-10 h-10 justify-center text-3xl text-gray-500 rounded-md lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                        aria-controls="drawer-navigation">
+                        <i class="bi bi-list block"></i>
+                    </button>
+
+                    <!-- Brand Icon -->
+                    <a href="#" class="flex items-center">
+                        <img src="../resource/hishebi_icon.svg" class="sm:h-11 h-10 w-auto ms-2.5"
+                            alt="hishebi_online" />
+                    </a>
+                </div>
+
+                <!-- Flex Mode -->
+                <div class="hidden w-full lg:block lg:w-auto">
+                    <ul
+                        class="flex flex-col lg:flex-row font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-white">
+
+                        <!-- Home -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 "
+                                aria-current="page">Home</a>
+                        </li>
+
+                        <!-- About -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">About</a>
+                        </li>
+
+                        <!-- Features Dropdown -->
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0 lg:w-auto">
+                                Features
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="z-20 hidden font-normal bg-white divide-y rounded-md shadow w-44">
+
+                                <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-600 lg:p-0">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Login Button -->
+                <!-- <button type="button"
+                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
+
+                <!-- If user is logged in
+                        show profile icon -->
+
+                <div role="button" id="dropdownNavbarLink" data-dropdown-toggle="dropdownShortcut"
+                    class="w-9 h-9 overflow-hidden  rounded-full">
+                    <img src="../resource/icons/user_profile.png" class="h-full w-full object-cover" alt="user_name">
+                </div>
+                <!-- Dropdown menu -->
+                <div id="dropdownShortcut" class="z-20 hidden font-normal bg-white divide-y rounded-md shadow w-44">
+
+                    <ul class="py-2 text-sm text-gray-800 " aria-labelledby="dropdownLargeButton">
+                        <!-- Profile -->
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 font-semibold tracking-wide">
+                                Profile
+                            </a>
+                        </li>
+                        <!-- Divider -->
+                        <hr>
+
+                        <!-- Logout -->
+                        <li>
+                            <a role="button" class="block px-4 py-2 hover:bg-gray-100">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Drawer Mode -->
+        <div id="drawer-navigation"
+            class="fixed  top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 space-y-3"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+
+            <!-- Close Drawer Button-->
+            <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-8 h-8 ms-auto block flex items-center justify-center">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2.5">
+
+                    <!-- Home -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-600 rounded-md"
+                            aria-current="page">Home</a>
+                    </li>
+
+                    <!-- About -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">About</a>
+                    </li>
+
+                    <!-- Features Dropdown -->
+                    <li>
+                        <button aria-controls="dropdown-example" data-collapse-toggle="dropdown-example"
+                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 rounded-md group">
+                            Features
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul id="dropdown-example" class="hidden py-2 space-y-2" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Income/Expenses </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Make budget </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Saving-Expense </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Pricing -->
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="pb-[4rem] md:pt-32 pt-28 min-h-screen">
+        <!-- FEATURES -->
+        <section class="space-y-16 px-5 max-w-5xl mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-10">
+                <!-- Billing details -->
+                <div class="max-w-[25rem] w-full space-y-8 pt-4 md:me-auto lg:ms-0 mx-auto ">
+                    <header class="flex justify-between">
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold tracking-wide">
+                            Billing details
+                        </h3>
+                    </header>
+
+                    <div class="space-y-4">
+                        <!-- Name -->
+                        <div class="text-lg space-y-2">
+                            <span class=" font-semibold my-auto block tracking-wide">
+                                Full name
+                            </span>
+
+                            <input id="name" value="Ahmod Hasan" type="text" readonly
+                                class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2.5 py-2.5 ">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="text-lg space-y-2">
+                            <span class=" font-semibold my-auto block tracking-wide">
+                                Phone number
+                            </span>
+
+                            <input id="phone" value="01734231234" min="0" type="number" readonly
+                                class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2.5 py-2.5 ">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="text-lg space-y-2">
+                            <span class=" font-semibold my-auto block tracking-wide">
+                                Email address
+                            </span>
+
+                            <input id="email" value="hasan@hishebi.app" type="email" readonly
+                                class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2.5 py-2.5 ">
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="max-w-[25rem] w-full lg:space-y-16 space-y-8 pt-4 md:me-auto lg:ms-0 mx-auto order-first lg:order-none">
+                    <header class="flex justify-between">
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold tracking-wide">
+                            Your package
+                        </h3>
+                    </header>
+                    <div class="p-8 text-lg space-y-7 shadow-md rounded-sm">
+                        <header class="space-y-3.5">
+                            <!-- Package Type -->
+                            <div class="bg-blue-500  px-2 py-0.5 w-fit rounded-md relative bottom-3">
+                                <h1 class="text-white uppercase text-sm">Most popular </h1>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <!-- Title -->
+                                <h3 class="text-2xl font-semibold text-blue-500 ">
+                                    <i class="bi bi-gem pe-1.5 "></i>Premium Platinum
+                                </h3>
+
+                                <!-- Price -->
+                                <h1 class="text-2xl space-x-0.5">
+                                    <span class="font-bold">
+                                        <span class="text-xl relative bottom-3 left-0.5">
+                                            ৳
+                                        </span>
+                                        <span>
+                                            469
+                                        </span>
+                                    </span>
+                                </h1>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <!-- Discount -->
+                                <div class="bg-orange-500 px-2 py-1 w-fit rounded-full">
+                                    <h1 class="text-white text-sm font-semibold">Save 20%</h1>
+                                </div>
+
+                                <!-- Validity -->
+                                <h3 class="text-blue-500 text-base font-semibold">
+                                    1 Year Validity
+                                </h3>
+                            </div>
+                        </header>
+
+                        <div class="space-y-5">
+                            <!-- Subtotal -->
+                            <div>
+                                <hr class="block border border-dashed border-gray-400">
+                                <h1 class="flex justify-between mt-2">
+                                    <span class="block  font-medium text-gray-600">
+                                        Subtotal
+                                    </span>
+
+                                    <span class="block font-semibold">
+                                        897.00 ৳
+                                    </span>
+                                </h1>
+                            </div>
+
+                            <!-- Total -->
+                            <div>
+                                <hr class="block border border-dashed border-gray-400">
+                                <h1 class="flex justify-between mt-2">
+                                    <span class="block  font-medium text-gray-600">
+                                        Total
+                                    </span>
+
+                                    <span class="block font-semibold">
+                                        897.00 ৳
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Select Payment -->
+            <div class="space-y-10">
+                <div class="space-y-8">
+                    <div class="sm:flex items-center sm:space-x-16 space-y-1">
+                        <!-- Title -->
+                        <h3 class="text-2xl font-semibold tracking-wide">
+                            Select payment method
+                        </h3>
+
+                        <!-- Youtube Tutorial link -->
+                        <a href="" target="_blank" class="block text-blue-500 text-lg font-semibold hover:underline">
+                            <i class="bi bi-youtube"></i> How to make payment?
+                        </a>
+                    </div>
+
+                    <form class="grid sm:grid-cols-4 grid-cols-1 gap-4 sm:max-w-2xl max-w-[201px]">
+                        <!-- Bkash -->
+                        <label for="bkash_redio" class="rounded-sm outline outline-gray-100 py-2.5 cursor-pointer">
+                            <div class="flex items-center justify-center space-x-3.5">
+                                <input id="bkash_redio" type="radio" value="bkash" name="payment_type"
+                                    class="w-5 h-5 text-blue-600 bg-blue-500 border-blue-500 focus:ring-blue-500">
+
+                                <img class="max-h-9" src="/resource/icons/payments/bkash.jpg" alt="bkash">
+                            </div>
+                        </label>
+
+                        <!-- Nagad -->
+                        <label for="nagad_redio" class="rounded-sm outline outline-gray-100 py-2.5 cursor-pointer">
+                            <div class="flex items-center justify-center space-x-3.5">
+                                <input id="nagad_redio" type="radio" value="nagad" name="payment_type"
+                                    class="w-5 h-5 text-blue-600 bg-blue-500 border-blue-500 focus:ring-blue-500">
+
+                                <img class="max-h-9" src="/resource/icons/payments/nagad.jpg" alt="nagad">
+                            </div>
+                        </label>
+
+                        <!-- Rocket -->
+                        <label for="rocket_redio" class="rounded-sm outline outline-gray-100 py-2.5 cursor-pointer">
+                            <div class="flex items-center justify-center space-x-3.5">
+                                <input id="rocket_redio" type="radio" value="nagad" name="payment_type"
+                                    class="w-5 h-5 text-blue-600 bg-blue-500 border-blue-500 focus:ring-blue-500">
+
+                                <img class="max-h-9" src="/resource/icons/payments/rocket.jpg" alt="rocket">
+                            </div>
+                        </label>
+
+                    </form>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="max-w-2xl">
+                    <header
+                        class="flex justify-between items-center rounded-sm outline outline-gray-100 lg:px-5 lg:py-5 px-4 py-5 mb-1.5">
+                        <!-- Title -->
+                        <h3 class="lg:text-2xl text-xl font-medium tracking-wide">
+                            Make Payment
+                            <span class="uppercase">Bkash</span>
+                        </h3>
+
+                        <!-- Marchent Logo
+                        - Change "Src" path dynamically according selected payment method -->
+                        <img class="lg:max-h-10 max-h-8" src="/resource/icons/payments/bkash.jpg" alt="bkash">
+                    </header>
+
+                    <div class="space-y-10 lg:p-5 p-4 rounded-sm outline outline-gray-200 bg-gray-100 ">
+                        <div>
+                            <!-- Basic Instruction -->
+                            <p class="font-medium"><b>Make Payment</b> করে আপনার <span>বিকাশ</span> নাম্বার এবং TrxID
+                                (Transaction ID) <br>
+                                Add করে Order place করুন
+                            </p>
+                        </div>
+
+                        <!-- Marchent Info -->
+                        <div>
+                            <hr class="block border border-dashed border-gray-400">
+                            <div class="grid sm:grid-cols-3 grid-cols-1 gap-7 mt-9">
+                                <div class="sm:col-span-2 text-lg space-y-3">
+                                    <!-- Account Number -->
+                                    <div class="flex items-center space-x-5">
+                                        <h1 class=" tracking-wide">
+                                            <span class="text-gray-700 font-medium"> Account Number:</span>
+                                            <span class="ps-0.5 font-semibold">017124524123</span>
+                                        </h1>
+
+                                        <!-- Copy Number -->
+                                        <button
+                                            class="flex space-x-1.5 bg-blue-100 hover:bg-blue-200 transiton-hover duration-200 px-2 py-1.5 rounded-md text-sm font-medium">
+                                            <i class="bi bi-clipboard block"></i> <span class="block">Copy</span>
+                                        </button>
+                                    </div>
+
+                                    <!--Account Type -->
+                                    <h1 class=" tracking-wide">
+                                        <span class="text-gray-700 font-medium">Account Type:</span>
+                                        <span class="ps-0.5 font-semibold">Merchant</span>
+                                    </h1>
+
+                                    <!-- Total Amount -->
+                                    <h1 class="block text-blue-500  font-medium">
+                                        You need to pay us <span class="text-xl font-semibold">৳469.00</span>
+                                    </h1>
+                                </div>
+
+                                <!-- QR Code -->
+                                <div class="text-center space-y-2">
+                                    <img class="max-h-24 mx-auto" src="/resource/qr.png" alt="">
+                                    <p class="text-xs">
+                                        QR কোড দিয়ে সহজেই পেমেন্ট করুন শুধু <br> আপনার ফোন থেকে স্ক্যান করুন
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- User Input form -->
+                        <div>
+                            <hr class="block border border-dashed border-gray-400">
+                            <div class="grid md:grid-cols-3 grid-cols-1 gap-7 mt-9">
+                                <div class="md:col-span-2 col-span-3 text-lg space-y-2">
+                                    <form class="space-y-4">
+                                        <!-- user number -->
+                                        <div class="text-lg space-y-1.5 ">
+                                            <span class=" font-semibold my-auto block tracking-wide">
+                                                Your <span>Bkash</span> account number
+                                            </span>
+
+                                            <input id="phone" value="" min="0" type="number"
+                                                placeholder="Account number"
+                                                class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2.5 py-2.5 ">
+                                        </div>
+
+                                        <!-- Transaction ID -->
+                                        <div class="text-lg space-y-1.5">
+                                            <span class=" font-semibold my-auto block tracking-wide">
+                                                <span> Bkash</span>Transaction ID
+                                            </span>
+
+                                            <input id="transaction_id" value="" type="text" placeholder="Transaction ID"
+                                                class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2.5 py-2.5 ">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Agree with Terms and conditions -->
+                    <div class="flex items-center mt-3.5">
+                        <div class="flex items-center h-5">
+                            <input id="agree" type="checkbox" value="true"
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50">
+                        </div>
+                        <div>
+                            <label for="agree" class="ml-2.5 text-base text-gray-900 cursor-pointer">I have read and
+                                agree
+                                to the website
+                            </label>
+                            <a target="_blank" class="text-blue-500 font-semibold hover:underline" href="">terms and
+                                conditions *</a>
+                        </div>
+                    </div>
+
+                    <!-- Place Order -->
+                    <button type="button"
+                        class="text-lg text-white bg-blue-600 hover:bg-blue-700 tracking-wide rounded-md py-2 w-full mx-auto block mt-5 font-medium">
+                        PLACE ORDER <span>৳469</span>
+                    </button>
+                </div>
+        </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="bg-blue-50">
+        <div class="mx-auto w-full max-w-5xl min-h-[19.5rem] flex items-center px-4 py-10">
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-12 gap-x-5 w-full">
+
+                <!-- Logo_&_Social handles -->
+                <div class="flex lg:justify-start justify-center sm:order-none order-last">
+                    <div class="md:space-y-12 space-y-10">
+                        <!-- Brand icon -->
+                        <img src="../resource/hishebi_icon.svg" class="lg:h-16 sm:h-14 h-16 sm:mx-0 mx-auto"
+                            alt="Hisebi" loading="lazy" />
+
+                        <!-- Our Social media links -->
+                        <div class="flex">
+
+                            <!-- LinkedIn -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/linkedin.png"
+                                    loading="lazy" alt="linkedin">
+                            </a>
+
+                            <!-- Youtube -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/youtube.png"
+                                    loading="lazy" alt="youtube">
+                            </a>
+
+                            <!-- FB -->
+                            <a class="sm:me-6 sm:ms-0 mx-3" target="_blank" href="">
+                                <img class="h-10 md:hover:shadow-sm" src="../resource/icons/social_media/fb.png"
+                                    loading="lazy" alt="facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8 relative md:right-0 right-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">About</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <li>
+                                <a href="" class="hover:underline">About</a>
+                            </li>
+                            <li>
+                                <a href="" class="hover:underline">Privacy Policy </a>
+                            </li>
+
+                            <li>
+                                <a href="" class="hover:underline">Terms & conditions </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="flex lg:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide"> Contact</h2>
+
+                        <!-- links -->
+                        <ul class="text-gray-700 space-y-4 text-base">
+                            <!-- Phone -->
+                            <li>
+                                <a><i class="bi bi-telephone-fill text-xs pe-3"></i>+88 01717932348</a>
+                            </li>
+                            <!-- Email -->
+                            <li>
+                                <a><i class="bi bi-envelope-fill text-sm pe-3"></i>hisebi.app@gmail.com</a>
+                            </li>
+
+                            <!-- Address -->
+                            <li class="flex items-center">
+                                <i class="bi bi-geo-alt-fill text-sm pe-3 block"></i> <span class="block">Municipal
+                                    Market,<br>Syed Mujtoba Ali Road,<br> Moulvibazar 3200</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Join our community -->
+                <div class="flex md:justify-start justify-center">
+                    <div class="md:space-y-12 space-y-8">
+                        <!-- title -->
+                        <h2 class="text-2xl font-medium text-gray-900 tracking-wide">Join our community</h2>
+
+                        <!-- button -->
+                        <a href="https://www.facebook.com/groups/235096546107840/" target="_blank"
+                            class="block flex sm:justify-start justify-center">
+                            <img src="../resource/icons/social_media/fb_group.png" class="h-14 md:md:hover:shadow-sm"
+                                alt="hisebi-group" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Copywrite -->
+        <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
+    </footer>
+
+
+    <!-- Flowbite 
+    * You must include this cdn in your app -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>

@@ -208,215 +208,133 @@
     </header>
 
     <main class="pb-[4rem] md:pt-32 pt-28 min-h-screen">
-        <!-- FEATURES -->
         <section class="space-y-10 px-4 max-w-5xl mx-auto">
-            <!-- Profile Info
-                 Read-Mode -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
+            <!-- This Buttons for Testing purpose
+                 remove these in production -->
+            <button data-modal-target="payment-success-model" data-modal-toggle="payment-success-model"
+                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="button">
+                Payment Success
+            </button>
 
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Edit
-                    </h3>
-                </header>
+            <button data-modal-target="payment-failed-model" data-modal-toggle="payment-failed-model"
+                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="button">
+                Payment Failed
+            </button>
 
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
+            <!-- Payment Success
+                    - Toggle the visibility of the model 
+                      by adding or removing the "Hidden" class from its class list
+             -->
+            <div id="payment-success-model" tabindex="-1"
+                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-[22rem] max-h-full">
 
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Name -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Name:</span>
-                            <span class="ps-1.5 font-semibold">Ahmod Hasan </span>
-                        </h1>
+                    <div class="relative bg-white rounded-md shadow">
+                        <!-- Close Model -->
+                        <button type="button"
+                            class="absolute top-3 right-2.5 text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-7 h-7 ml-auto inline-flex justify-center items-center"
+                            data-modal-hide="payment-success-model">
+                            <i class="bi bi-x-lg"></i>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                        <div class="p-5 text-center space-y-5">
+                            <!-- Success Icon -->
+                            <svg class="mx-auto text-gray-400 w-12 h-12" viewBox="0 0 57 57" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_712_2776)">
+                                    <path
+                                        d="M56.7405 28.4147C56.7405 35.9023 53.766 43.0832 48.4715 48.3777C43.1769 53.6723 35.996 56.6467 28.5084 56.6467C21.0208 56.6467 13.8399 53.6723 8.54534 48.3777C3.25081 43.0832 0.276367 35.9023 0.276367 28.4147C0.276367 20.9271 3.25081 13.7461 8.54534 8.45159C13.8399 3.15706 21.0208 0.182617 28.5084 0.182617C35.996 0.182617 43.1769 3.15706 48.4715 8.45159C53.766 13.7461 56.7405 20.9271 56.7405 28.4147ZM42.7303 17.7218C42.4782 17.4706 42.1781 17.2728 41.8478 17.1402C41.5175 17.0077 41.1639 16.9431 40.8081 16.9504C40.4523 16.9576 40.1017 17.0365 39.7771 17.1824C39.4525 17.3283 39.1606 17.5382 38.919 17.7994L26.6627 33.4153L19.2765 26.0255C18.7748 25.558 18.1112 25.3035 17.4255 25.3156C16.7398 25.3277 16.0856 25.6055 15.6006 26.0904C15.1157 26.5753 14.8379 27.2295 14.8258 27.9152C14.8137 28.6009 15.0683 29.2645 15.5358 29.7663L24.8735 39.1076C25.1251 39.3586 25.4246 39.5565 25.7543 39.6893C26.084 39.8221 26.4371 39.8872 26.7924 39.8806C27.1478 39.874 27.4982 39.7959 27.8227 39.651C28.1472 39.506 28.4393 39.2972 28.6813 39.037L42.7691 21.4272C43.2494 20.9279 43.5147 20.2601 43.5081 19.5673C43.5015 18.8745 43.2235 18.2119 42.7338 17.7218H42.7303Z"
+                                        fill="#00D965" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_712_2776">
+                                        <rect width="56.4641" height="56.4641" fill="white"
+                                            transform="translate(0.275391 0.182617)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
 
-                        <!-- Email -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Email:</span>
-                            <span class="ps-1.5 font-semibold ">hasan@hishebi.app</span>
-                        </h1>
+                            <div class="space-y-0.5">
+                                <!-- Title -->
+                                <h3 class="text-2xl font-medium text-green-400">
+                                    Payment Successful
+                                </h3>
 
-                        <!-- Phone -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Phone:</span>
-                            <span class="ps-1.5 font-semibold "> 01734231234 </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profile Info
-                 Edit-Mode -->
-            <div class="max-w-[25rem]  w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto ">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
-
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Done
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="sm:p-8 p-6 text-lg space-y-4">
-                        <!-- Name -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Name:</span>
-
-                            <div class="col-span-5">
-                                <input id="name" value="Ahmod Hasan" type="text" placeholder="Enter name"
-                                    autocomplete="name"
-                                    class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
+                                <!-- Message -->
+                                <p class="text-gray-600 text-lg">
+                                    Within 24 houses we'll approve your package.
+                                </p>
                             </div>
-                        </div>
 
-                        <!-- Email -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Email:</span>
-
-                            <div class="col-span-5">
-                                <input id="email" value="hasan@hishebi.app" type="email" placeholder="Enter email"
-                                    autocomplete="email"
-                                    class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Phone:</span>
-
-                            <div class="col-span-5 ">
-                                <input id="phone" value="01734231234" min="0" type="number" placeholder="Enter phone"
-                                    autocomplete="email"
-                                    class="bg-blue-100  border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
-                            </div>
+                            <!-- Open App -->
+                            <a href="" class="block">
+                                <button data-modal-hide="popup-modal" type="button"
+                                    class="text-gray-900 bg-blue-50 hover:bg-blue-100 font-medium rounded-md text-lg inline-flex items-center px-3.5 py-2 text-center">
+                                    Open App
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <!-- My Subscription -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        My Subscription
-                    </h3>
-                </header>
+            <!-- Payment Failed
+                    - Toggle the visibility of the model 
+                      by adding or removing the "Hidden" class from its class list
+             -->
+            <div id="payment-failed-model" tabindex="-1"
+                class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-[22rem] max-h-full">
 
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
+                    <div class="relative bg-white rounded-md shadow">
+                        <!-- Close Model -->
+                        <button type="button"
+                            class="absolute top-3 right-2.5 text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-md text-sm w-7 h-7 ml-auto inline-flex justify-center items-center"
+                            data-modal-hide="payment-failed-model">
+                            <i class="bi bi-x-lg"></i>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                        <div class="p-5 text-center space-y-5">
+                            <!-- Failed Icon -->
+                            <svg class="mx-auto text-gray-400 w-12 h-12" viewBox="0 0 58 59" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_735_2718)">
+                                    <path
+                                        d="M32.8042 6.56972C32.4505 5.9535 31.9404 5.44153 31.3255 5.0855C30.7106 4.72947 30.0126 4.54199 29.3021 4.54199C28.5915 4.54199 27.8936 4.72947 27.2787 5.0855C26.6638 5.44153 26.1537 5.9535 25.7999 6.56972L1.29561 48.2632C-0.337532 51.0434 1.62081 54.5777 4.79776 54.5777H53.8028C56.9798 54.5777 58.9417 51.0399 57.305 48.2632L32.8042 6.56972ZM29.2949 18.8415C31.2068 18.8415 32.7042 20.4925 32.5112 22.3973L31.2604 34.93C31.2184 35.4223 30.9931 35.881 30.6292 36.2152C30.2652 36.5494 29.7891 36.7348 29.2949 36.7348C28.8008 36.7348 28.3247 36.5494 27.9607 36.2152C27.5967 35.881 27.3715 35.4223 27.3294 34.93L26.0787 22.3973C26.0338 21.9478 26.0835 21.494 26.2246 21.0649C26.3658 20.6359 26.5953 20.2411 26.8983 19.9062C27.2013 19.5712 27.5711 19.3034 27.9838 19.12C28.3966 18.9367 28.8432 18.8418 29.2949 18.8415ZM29.3021 40.2833C30.2499 40.2833 31.1588 40.6598 31.829 41.3299C32.4992 42.0001 32.8757 42.9091 32.8757 43.8569C32.8757 44.8047 32.4992 45.7136 31.829 46.3838C31.1588 47.054 30.2499 47.4305 29.3021 47.4305C28.3543 47.4305 27.4453 47.054 26.7751 46.3838C26.105 45.7136 25.7285 44.8047 25.7285 43.8569C25.7285 42.9091 26.105 42.0001 26.7751 41.3299C27.4453 40.6598 28.3543 40.2833 29.3021 40.2833Z"
+                                        fill="#D90007" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_735_2718">
+                                        <rect width="57.1779" height="57.1779" fill="white"
+                                            transform="translate(0.707031 0.973145)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
 
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Current Package-->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Package:</span>
-                            <span class="ps-1.5 font-semibold">Premium Platinum </span>
-                        </h1>
+                            <div class="space-y-0.5">
+                                <!-- Title -->
+                                <h3 class="text-2xl font-medium text-red-600">
+                                    Payment failed
+                                </h3>
 
-                        <!-- Validation -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Validation:</span>
-                            <span class="ps-1.5 font-semibold ">1 year</span>
-                        </h1>
+                                <!-- Message -->
+                                <p class="text-gray-600 text-lg">
+                                    Something went wrong!
+                                </p>
 
-                        <!-- Expire date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Expire date:</span>
-                            <span class="ps-1.5 font-semibold "> 03 Jan 2024</span>
-                        </h1>
-
-                        <!-- Status -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Status:</span>
-                            <!-- Active -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-green-400 font-semibold">Active</span>
-                            </span> -->
-
-                            <!-- Pending -->
-                            <span class="ps-1.5 ">
-                                <span class="text-blue-500  font-semibold">Pending</span>
-                            </span>
-
-                            <!--  Expired -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-red-600  font-semibold">Expired</span>
-                                <a class="text-blue-500 hover:text-blue-600 text-sm  font-medium underline ms-2" href="">
-                                    Buy new package
-                                </a>
-                            </span> -->
-                        </h1>
-
-                        <!-- If the status is "Pending" show notice -->
-                        <span class="text-green-500 text-sm font-medium block ">
-                            ২৪ ঘন্টার ভেতরে আপনার প্যাকেজটি এক্টিভ করা হবে!
-                        </span>
+                            </div>
+                            <!-- Try again -->
+                            <button data-modal-hide="popup-modal" type="button"
+                                class="text-gray-900 bg-blue-50 hover:bg-blue-100 font-medium rounded-md text-lg inline-flex items-center px-3.5 py-2 text-center">
+                                Try again
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Last payment   -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Last payment 
-                    </h3>
-
-                    <!-- Link -->
-                    <a href="" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                       View all
-                    </a>
-                </header>
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Date</span>
-                            <span class="ps-1.5 font-semibold">10 Oct 2023 </span>
-                        </h1>
-
-                        <!-- Payment method -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Payment method:</span>
-                            <span class="ps-1.5 font-semibold ">Bkash</span>
-                        </h1>
-
-                        <!-- Price -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Price:</span>
-                            <span class="ps-1.5 font-semibold "> ৳49 </span>
-
-                            <!-- Package -->
-                            <h1 class=" tracking-wide">
-                                <span class="text-gray-600">Package:</span>
-                                <span class="ps-1.5 font-semibold "> Premium Platinum</span>
-                            </h1>
-                    </div>
-                </div>
-
-            </div>
-
-            </div>
-
         </section>
     </main>
 

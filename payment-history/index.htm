@@ -20,6 +20,15 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- JQUERY Data table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
     <style>
         /* Apply The Google Font */
         body {
@@ -112,10 +121,10 @@
 
                 <!-- Login Button -->
                 <!-- <button type="button"
-                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
+                class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
 
                 <!-- If user is logged in
-                        show profile icon -->
+                    show profile icon -->
 
                 <div role="button" id="dropdownNavbarLink" data-dropdown-toggle="dropdownShortcut"
                     class="w-9 h-9 overflow-hidden  rounded-full">
@@ -207,216 +216,105 @@
         </div>
     </header>
 
-    <main class="pb-[4rem] md:pt-32 pt-28 min-h-screen">
-        <!-- FEATURES -->
-        <section class="space-y-10 px-4 max-w-5xl mx-auto">
-            <!-- Profile Info
-                 Read-Mode -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
+    <main class="pb-[4rem] md:pt-28 pt-24">
+        <section class="max-w-5xl mx-auto px-10 space-y-10">
+            <!-- Title -->
+            <h1 class='text-2xl md:text-3xl font-semibold'>
+                Payment History
+            </h1>
 
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Edit
-                    </h3>
-                </header>
+            <!-- Payment History Table -->
+            <div class=" overflow-x-auto pb-4">
+                <table id="payment-history-table" class="display relative whitespace-nowrap py-5">
+                    <thead>
+                        <th>
+                            Plan
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Payment method
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                    </thead>
 
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
+                    <tbody>
+                        <tr>
+                            <td>
+                                Premium Platinum
+                            </td>
+                            <td>
+                                ৳49
+                            </td>
+                            <td>
+                                Bkash
+                            </td>
+                            <!-- [
+                                    Success => "text-green-400", 
+                                    Refunded => "text-yellow-500",
+                                    Reject => "text-red-600"
+                                 ] -->
+                            <td class="text-green-400 font-medium">
+                                Success
+                            </td>
+                            <td>
+                                14 Jan, 2023
+                            </td>
+                        </tr>
 
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Name -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Name:</span>
-                            <span class="ps-1.5 font-semibold">Ahmod Hasan </span>
-                        </h1>
-
-                        <!-- Email -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Email:</span>
-                            <span class="ps-1.5 font-semibold ">hasan@hishebi.app</span>
-                        </h1>
-
-                        <!-- Phone -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Phone:</span>
-                            <span class="ps-1.5 font-semibold "> 01734231234 </span>
-                        </h1>
-                    </div>
-                </div>
+                        <tr>
+                            <td>
+                                Premium Platinum
+                            </td>
+                            <td>
+                                ৳49
+                            </td>
+                            <td>
+                                Bkash
+                            </td>
+                            <!-- [
+                                    Success => "text-green-400", 
+                                    Refunded => "text-yellow-500",
+                                    Reject => "text-red-600"
+                                 ] -->
+                            <td class="text-yellow-500 font-medium">
+                                Refunded
+                            </td>
+                            <td>
+                                14 Jan, 2023
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Premium Platinum
+                            </td>
+                            <td>
+                                ৳49
+                            </td>
+                            <td>
+                                Bkash
+                            </td>
+                            <!-- [
+                                    Success => "text-green-400", 
+                                    Refunded => "text-yellow-500",
+                                    Reject => "text-red-600"
+                                 ] -->
+                            <td class="text-red-600 font-medium">
+                                Reject
+                            </td>
+                            <td>
+                                14 Jan, 2023
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <!-- Profile Info
-                 Edit-Mode -->
-            <div class="max-w-[25rem]  w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto ">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
-
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Done
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="sm:p-8 p-6 text-lg space-y-4">
-                        <!-- Name -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Name:</span>
-
-                            <div class="col-span-5">
-                                <input id="name" value="Ahmod Hasan" type="text" placeholder="Enter name"
-                                    autocomplete="name"
-                                    class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Email:</span>
-
-                            <div class="col-span-5">
-                                <input id="email" value="hasan@hishebi.app" type="email" placeholder="Enter email"
-                                    autocomplete="email"
-                                    class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Phone:</span>
-
-                            <div class="col-span-5 ">
-                                <input id="phone" value="01734231234" min="0" type="number" placeholder="Enter phone"
-                                    autocomplete="email"
-                                    class="bg-blue-100  border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- My Subscription -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        My Subscription
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Current Package-->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Package:</span>
-                            <span class="ps-1.5 font-semibold">Premium Platinum </span>
-                        </h1>
-
-                        <!-- Validation -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Validation:</span>
-                            <span class="ps-1.5 font-semibold ">1 year</span>
-                        </h1>
-
-                        <!-- Expire date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Expire date:</span>
-                            <span class="ps-1.5 font-semibold "> 03 Jan 2024</span>
-                        </h1>
-
-                        <!-- Status -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Status:</span>
-                            <!-- Active -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-green-400 font-semibold">Active</span>
-                            </span> -->
-
-                            <!-- Pending -->
-                            <span class="ps-1.5 ">
-                                <span class="text-blue-500 font-semibold">Pending</span>
-                            </span>
-
-                            <!--  Expired -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-red-600  font-semibold">Expired</span>
-                                <a class="text-blue-500 hover:text-blue-600 text-sm  font-medium underline ms-2" href="">
-                                    Buy new package
-                                </a>
-                            </span> -->
-                        </h1>
-
-                        <!-- If the status is "Pending" show notice -->
-                        <span class="text-green-500 text-sm font-medium block ">
-                            ২৪ ঘন্টার ভেতরে আপনার প্যাকেজটি এক্টিভ করা হবে!
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Last payment   -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Last payment 
-                    </h3>
-
-                    <!-- Link -->
-                    <a href="" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                       View all
-                    </a>
-                </header>
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Date</span>
-                            <span class="ps-1.5 font-semibold">10 Oct 2023 </span>
-                        </h1>
-
-                        <!-- Payment method -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Payment method:</span>
-                            <span class="ps-1.5 font-semibold ">Bkash</span>
-                        </h1>
-
-                        <!-- Price -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Price:</span>
-                            <span class="ps-1.5 font-semibold "> ৳49 </span>
-
-                            <!-- Package -->
-                            <h1 class=" tracking-wide">
-                                <span class="text-gray-600">Package:</span>
-                                <span class="ps-1.5 font-semibold "> Premium Platinum</span>
-                            </h1>
-                    </div>
-                </div>
-
-            </div>
-
-            </div>
-
         </section>
     </main>
 
@@ -524,6 +422,22 @@
         <!-- Copywrite -->
         <p class="text-center py-2.5 text-gray-500 text-sm">© 2023 Hisebi. All Rights Reserved. </p>
     </footer>
+
+
+    <script>
+        // Initialize table
+        $(document).ready(function () {
+            $('#payment-history-table').DataTable({
+                responsive: true,
+                ordering: false, // Disable sorting
+                searching: false, // Disable search input
+                pageLength: 10, // Set the default number of rows per page
+                lengthChange: false, // Disable the option to change the number of rows displayed
+                info: false, // Remove the information about the number of records
+            });
+        });
+    </script>
+
 
 
     <!-- Flowbite 

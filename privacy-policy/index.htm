@@ -112,10 +112,10 @@
 
                 <!-- Login Button -->
                 <!-- <button type="button"
-                    class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
+                class="text-white bg-blue-600 hover:bg-blue-700 transation-all duration-150 font-medium tracking-wide rounded-md sm:h-[2.45rem] sm:w-[5.75rem] h-[2.45rem] w-[5.5rem] block ">Login</button> -->
 
                 <!-- If user is logged in
-                        show profile icon -->
+                    show profile icon -->
 
                 <div role="button" id="dropdownNavbarLink" data-dropdown-toggle="dropdownShortcut"
                     class="w-9 h-9 overflow-hidden  rounded-full">
@@ -207,216 +207,54 @@
         </div>
     </header>
 
-    <main class="pb-[4rem] md:pt-32 pt-28 min-h-screen">
-        <!-- FEATURES -->
-        <section class="space-y-10 px-4 max-w-5xl mx-auto">
-            <!-- Profile Info
-                 Read-Mode -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
+    <main class="pb-[4rem] md:pt-28 pt-24">
+        <section class="max-w-5xl mx-auto px-10 space-y-8">
+            <!-- Title -->
+            <h1 class='text-3xl font-semibold md:text-start text-center'>
+                Privacy Policy
+            </h1>
 
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Edit
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Name -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Name:</span>
-                            <span class="ps-1.5 font-semibold">Ahmod Hasan </span>
-                        </h1>
-
-                        <!-- Email -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Email:</span>
-                            <span class="ps-1.5 font-semibold ">hasan@hishebi.app</span>
-                        </h1>
-
-                        <!-- Phone -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Phone:</span>
-                            <span class="ps-1.5 font-semibold "> 01734231234 </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Profile Info
-                 Edit-Mode -->
-            <div class="max-w-[25rem]  w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto ">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Profile info
-                    </h3>
-
-                    <!-- Action -->
-                    <h3 role="button" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                        Done
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="sm:p-8 p-6 text-lg space-y-4">
-                        <!-- Name -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Name:</span>
-
-                            <div class="col-span-5">
-                                <input id="name" value="Ahmod Hasan" type="text" placeholder="Enter name"
-                                    autocomplete="name"
-                                    class=" bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Email:</span>
-
-                            <div class="col-span-5">
-                                <input id="email" value="hasan@hishebi.app" type="email" placeholder="Enter email"
-                                    autocomplete="email"
-                                    class="bg-blue-100 border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="grid grid-cols-6 space-x-4">
-                            <span class="col-span-1 text-gray-600 my-auto block tracking-wide">Phone:</span>
-
-                            <div class="col-span-5 ">
-                                <input id="phone" value="01734231234" min="0" type="number" placeholder="Enter phone"
-                                    autocomplete="email"
-                                    class="bg-blue-100  border-2 border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-100 focus:border-blue-100 block w-full px-2 py-1.5 ">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- My Subscription -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        My Subscription
-                    </h3>
-                </header>
-
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Current Package-->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Package:</span>
-                            <span class="ps-1.5 font-semibold">Premium Platinum </span>
-                        </h1>
-
-                        <!-- Validation -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Validation:</span>
-                            <span class="ps-1.5 font-semibold ">1 year</span>
-                        </h1>
-
-                        <!-- Expire date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Expire date:</span>
-                            <span class="ps-1.5 font-semibold "> 03 Jan 2024</span>
-                        </h1>
-
-                        <!-- Status -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Status:</span>
-                            <!-- Active -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-green-400 font-semibold">Active</span>
-                            </span> -->
-
-                            <!-- Pending -->
-                            <span class="ps-1.5 ">
-                                <span class="text-blue-500 font-semibold">Pending</span>
-                            </span>
-
-                            <!--  Expired -->
-                            <!-- <span class="ps-1.5 ">
-                                <span class="text-red-600  font-semibold">Expired</span>
-                                <a class="text-blue-500 hover:text-blue-600 text-sm  font-medium underline ms-2" href="">
-                                    Buy new package
-                                </a>
-                            </span> -->
-                        </h1>
-
-                        <!-- If the status is "Pending" show notice -->
-                        <span class="text-green-500 text-sm font-medium block ">
-                            ২৪ ঘন্টার ভেতরে আপনার প্যাকেজটি এক্টিভ করা হবে!
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Last payment   -->
-            <div class="max-w-[25rem] w-full shadow-md rounded-sm pt-4 md:me-auto md:ms-0 mx-auto">
-                <header class="px-8 flex justify-between">
-                    <!-- Title -->
-                    <h3 class="text-2xl font-medium">
-                        Last payment 
-                    </h3>
-
-                    <!-- Link -->
-                    <a href="" class="text-xl font-medium text-blue-500 hover:text-blue-600">
-                       View all
-                    </a>
-                </header>
-                <div class="pt-3.5">
-                    <!-- Divider -->
-                    <hr class="border-gray-200 border">
-
-                    <div class="p-8 text-lg space-y-4">
-                        <!-- Date -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Date</span>
-                            <span class="ps-1.5 font-semibold">10 Oct 2023 </span>
-                        </h1>
-
-                        <!-- Payment method -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Payment method:</span>
-                            <span class="ps-1.5 font-semibold ">Bkash</span>
-                        </h1>
-
-                        <!-- Price -->
-                        <h1 class=" tracking-wide">
-                            <span class="text-gray-600">Price:</span>
-                            <span class="ps-1.5 font-semibold "> ৳49 </span>
-
-                            <!-- Package -->
-                            <h1 class=" tracking-wide">
-                                <span class="text-gray-600">Package:</span>
-                                <span class="ps-1.5 font-semibold "> Premium Platinum</span>
-                            </h1>
-                    </div>
-                </div>
-
-            </div>
-
-            </div>
-
+            <!-- Content -->
+            <article class="leading-7 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusantium, quibusdam sed laboriosam
+                dolorem fuga molestiae atque itaque unde culpa architecto quasi quidem veritatis quas perspiciatis saepe
+                soluta neque! Ea iste quidem debitis sed? Quod saepe asperiores, accusantium maiores, esse consequatur
+                perspiciatis porro laborum soluta perferendis dignissimos sunt eius. Exercitationem et quasi unde culpa
+                modi labore nostrum! Illum voluptatibus praesentium eaque velit consequatur mollitia harum eligendi
+                beatae hic, cum exercitationem rerum consectetur molestias dolorem illo vero repudiandae tenetur,
+                quaerat enim labore vitae recusandae dolores iure perferendis! Similique perspiciatis distinctio quod
+                ipsa totam a est ad? Delectus voluptatem voluptates possimus sed minus vitae suscipit qui accusantium
+                voluptas, assumenda expedita ad consequuntur excepturi eos quaerat perspiciatis illum odio repellat
+                repellendus labore sapiente. Asperiores laborum soluta quis quo, aut minus ea accusantium accusamus
+                provident nemo saepe deleniti blanditiis? Impedit illum magni provident error adipisci, ex velit ut
+                obcaecati sapiente est minus excepturi expedita dolorem facilis aperiam totam, assumenda ducimus iste
+                vitae doloribus omnis eveniet illo laboriosam at? Excepturi iusto, debitis obcaecati recusandae
+                doloremque, quas placeat nam ullam mollitia dolore distinctio eligendi? Perferendis molestias iure
+                temporibus placeat quam expedita, praesentium fugiat asperiores mollitia laborum explicabo, qui magni
+                reprehenderit voluptatibus iste et tempore omnis quasi pariatur dolores fuga accusantium deserunt.
+                Adipisci cumque eligendi, aperiam recusandae facilis voluptate laboriosam iste! Deserunt nostrum in
+                optio saepe provident delectus ab fugiat odio maiores tempore similique voluptates aspernatur veritatis
+                non, quaerat voluptatum minima velit architecto adipisci magnam. Ducimus odio expedita quasi
+                perspiciatis quibusdam. Perferendis libero magni odio maxime eum excepturi ipsum unde iste fugiat
+                voluptates, odit eius possimus, ducimus nisi, nobis laboriosam. Reprehenderit impedit a debitis quam
+                ratione magni nihil vel veritatis architecto molestias eum sed adipisci expedita pariatur sit
+                voluptatibus natus, porro laudantium, ut ipsa doloribus. Rem sapiente inventore quaerat deserunt sint
+                odio qui enim quibusdam, architecto vitae placeat quisquam ad soluta quia ab aperiam facilis voluptas
+                sed exercitationem voluptatum! Molestiae nulla, expedita ex sunt repudiandae labore. Inventore similique
+                quae ad amet illum nam, obcaecati temporibus nobis quibusdam nulla rerum, praesentium perferendis hic
+                autem impedit in? Minus beatae illum velit nam, recusandae esse, quasi officiis a quidem tempora
+                sapiente repellendus, repellat facilis culpa aspernatur exercitationem tenetur ullam in labore minima
+                libero. Ratione, dolor dolorem quo veritatis explicabo nemo illo recusandae minus, odit animi quaerat
+                beatae! Odio corrupti quos iusto sed nemo at optio. Voluptate vel libero dolore cum voluptatum eaque qui
+                eius nam earum modi a, amet nesciunt, unde voluptas culpa? Molestias numquam repellendus perspiciatis
+                necessitatibus blanditiis rerum a asperiores, sit eum est nesciunt non odit eligendi et praesentium
+                veritatis alias hic doloribus at vero porro, saepe facilis adipisci. Omnis aliquam quaerat debitis
+                provident inventore illo at magni ea, id quis nam soluta fugiat facere in, error assumenda numquam ut
+                veritatis et itaque impedit veniam nisi! Vitae perspiciatis illum quam natus error veniam quis quo
+                ducimus aperiam, aut asperiores consequatur maiores iste dolorum nesciunt ipsa corrupti quas aliquam
+                laborum! Praesentium culpa, cupiditate in mollitia nam eum rerum, atque corporis nobis labore voluptas!
+                Ducimus et repellendus libero! Voluptatibus, repellat?
+            </article>
         </section>
     </main>
 
